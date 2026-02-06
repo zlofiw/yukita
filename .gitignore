@@ -1,5 +1,8 @@
 node_modules
 coverage
+packages/**/dist
+!packages/docs/dist
+!packages/docs/dist/**
 .DS_Store
 *.log
 .env
