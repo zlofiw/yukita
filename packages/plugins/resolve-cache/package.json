@@ -1,0 +1,30 @@
+{
+  "name": "@yukita/plugins-resolve-cache",
+  "version": "1.0.0",
+  "description": "Reference resolve cache plugin for YukiTa.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "pnpm test:unit",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:integration": "echo \"No integration tests for @yukita/plugins-resolve-cache\""
+  },
+  "dependencies": {
+    "@yukita/plugin-kit": "workspace:*"
+  }
+}

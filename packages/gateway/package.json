@@ -1,0 +1,33 @@
+{
+  "name": "@yukita/gateway",
+  "version": "1.0.0",
+  "description": "WebSocket gateway for YukiTa state streaming and control commands.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint \"src/**/*.ts\"",
+    "test": "pnpm test:unit",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:integration": "echo \"No integration tests for @yukita/gateway\""
+  },
+  "dependencies": {
+    "@yukita/core": "workspace:*",
+    "@yukita/plugin-kit": "workspace:*",
+    "jsonwebtoken": "^9.0.2",
+    "ws": "^8.18.0"
+  }
+}
