@@ -31,6 +31,7 @@ features:
 - `@yukita/connector-discord`
 - `@yukita/plugins-metrics`
 - `@yukita/plugins-resolve-cache`
+- `@yukita/docs`
 
 ## Monorepo
 

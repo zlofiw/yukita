@@ -1,7 +1,5 @@
 node_modules
-dist
 coverage
-docs/.vitepress/dist
 .DS_Store
 *.log
 .env

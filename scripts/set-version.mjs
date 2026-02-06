@@ -19,6 +19,7 @@ const manifestPaths = [
   'packages/protocol/package.json',
   'packages/plugin-kit/package.json',
   'packages/gateway/package.json',
+  'packages/docs/package.json',
   'packages/connectors/connector-discord/package.json',
   'packages/plugins/metrics/package.json',
   'packages/plugins/resolve-cache/package.json'

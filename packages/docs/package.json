@@ -1,0 +1,35 @@
+{
+  "name": "@yukita/docs",
+  "version": "1.0.0",
+  "description": "Prebuilt static documentation site for YukiTa.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.cjs",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "index.cjs",
+    "index.d.ts",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/sync-dist.mjs",
+    "typecheck": "node -e \"console.log('No typecheck for @yukita/docs')\"",
+    "lint": "node -e \"console.log('No lint for @yukita/docs')\"",
+    "test": "pnpm test:unit",
+    "test:unit": "vitest run --passWithNoTests",
+    "test:integration": "echo \"No integration tests for @yukita/docs\""
+  }
+}

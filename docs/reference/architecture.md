@@ -6,6 +6,7 @@
 - `packages/protocol`: Lavalink REST/WS clients, payload mapping, backoff.
 - `packages/plugin-kit`: Result, YukitaError, plugin contracts, async event bus.
 - `packages/gateway`: WebSocket command/event bridge for web and bot clients.
+- `packages/docs`: npm module with bundled docs static assets.
 - `packages/connectors/connector-discord`: Discord voice state/server adapter.
 - `packages/plugins/*`: reference plugins (`metrics`, `resolve-cache`).
 

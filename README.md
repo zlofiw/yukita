@@ -11,6 +11,7 @@ TypeScript-first Lavalink toolkit for Node.js.
 - `@yukita/connector-discord` - Discord voice-state/server adapter.
 - `@yukita/plugins-metrics` - reference metrics plugin.
 - `@yukita/plugins-resolve-cache` - reference resolve cache plugin.
+- `@yukita/docs` - packaged static documentation bundle (`docs/.vitepress/dist`).
 
 ## Install (Monorepo)
 
