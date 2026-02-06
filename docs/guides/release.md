@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- npm organization and package names are available.
-- `NPM_TOKEN` secret is configured in GitHub repository settings.
+- npm account has publish access for `@yukita/*`.
+- Local npm auth is ready: `npm whoami`.
 - All package versions are aligned.
 
 ## Local Validation
@@ -25,15 +25,32 @@ pnpm install --lockfile-only
 
 `version:all` updates root + all publishable `@yukita/*` package manifests in one step.
 
-## Tag and Push
+## Local Publish
+
+Dry-run first:
+
+```bash
+pnpm publish:dry-run
+```
+
+Then publish:
+
+```bash
+pnpm publish:npm
+```
+
+## Tag and Push Repository
 
 ```bash
 git tag v1.0.1
+git push origin main
 git push origin v1.0.1
 ```
 
-`publish.yml` validates that every `@yukita/*` package version matches the pushed tag and then publishes to npm.
+## Docs (Local Build)
 
-## GitHub Pages
+```bash
+pnpm docs:build
+```
 
-`docs-pages.yml` builds VitePress from `docs/` on `main` branch pushes and deploys to GitHub Pages.
+Built static site is in `docs/.vitepress/dist`. Deploy it manually to your hosting target.

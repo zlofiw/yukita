@@ -1,13 +1,10 @@
 import { defineConfig } from 'vitepress';
 
-const repository = process.env.GITHUB_REPOSITORY?.split('/')[1];
-const base = process.env.GITHUB_ACTIONS === 'true' && repository ? `/${repository}/` : '/';
-
 export default defineConfig({
   title: 'YukiTa',
   description: 'TypeScript-first Lavalink toolkit for Node.js',
   lang: 'en-US',
-  base,
+  base: '/',
   cleanUrls: true,
   lastUpdated: true,
   head: [

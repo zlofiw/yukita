@@ -152,7 +152,7 @@ class HelloPlugin implements YukitaPlugin {
 }
 ```
 
-## Docs (GitHub Pages)
+## Docs
 
 - Local dev: `pnpm docs:dev`
 - Production build: `pnpm docs:build`
@@ -174,13 +174,16 @@ class HelloPlugin implements YukitaPlugin {
 - `pnpm check`
 - `pnpm docs:dev`
 - `pnpm docs:build`
+- `pnpm publish:dry-run`
+- `pnpm publish:npm`
 
-## CI / Release
+## Local Release
 
-- CI workflow: `.github/workflows/ci.yml`
-- GitHub Pages deploy: `.github/workflows/docs-pages.yml`
-- npm publish from tags (`v*.*.*`): `.github/workflows/publish.yml`
 - Version sync helper: `pnpm version:all <x.y.z>`
+- Full validation: `pnpm check`
+- npm dry-run: `pnpm publish:dry-run`
+- npm publish: `pnpm publish:npm`
+- Release guide: `docs/guides/release.md`
 
 ## License
 
