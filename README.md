@@ -1,27 +1,30 @@
 # YukiTa
 
-YukiTa is a TypeScript-first Lavalink toolkit with a fully rewritten architecture:
+TypeScript-first Lavalink toolkit for Node.js.
 
-- `@yukita/core` - node pool, resolver, players, queue, events and plugin runtime.
-- `@yukita/protocol` - Lavalink REST/WS protocol clients and payload codecs.
-- `@yukita/plugin-kit` - plugin interfaces, hooks and shared Result/Error primitives.
-- `@yukita/gateway` - WebSocket control/stream gateway for bot and web clients.
-- `@yukita/connector-discord` - Discord voice-state adapter without discord.js coupling.
-- `@yukita/plugins-metrics`, `@yukita/plugins-resolve-cache` - reference plugins.
+## Packages
 
-## Install
+- `@yukita/core` - node pool, resolver, player manager, queue and typed events.
+- `@yukita/protocol` - Lavalink REST/WS clients, payload mapping, backoff.
+- `@yukita/plugin-kit` - plugin contracts, Result primitives, shared errors.
+- `@yukita/gateway` - WebSocket command/event gateway with auth + roles.
+- `@yukita/connector-discord` - Discord voice-state/server adapter.
+- `@yukita/plugins-metrics` - reference metrics plugin.
+- `@yukita/plugins-resolve-cache` - reference resolve cache plugin.
+
+## Install (Monorepo)
 
 ```bash
 pnpm install
 ```
 
-Build all packages:
+## Build
 
 ```bash
 pnpm build
 ```
 
-## Quick Start (`@yukita/core`)
+## Quick Start
 
 ```ts
 import { YukitaClient } from '@yukita/core';
@@ -46,14 +49,14 @@ if (!started.ok) {
   throw started.error;
 }
 
-const metricsPlugin = await client.use(new MetricsPlugin());
-if (!metricsPlugin.ok) {
-  throw metricsPlugin.error;
+const metrics = await client.use(new MetricsPlugin());
+if (!metrics.ok) {
+  throw metrics.error;
 }
 
-const cachePlugin = await client.use(new ResolveCachePlugin());
-if (!cachePlugin.ok) {
-  throw cachePlugin.error;
+const cache = await client.use(new ResolveCachePlugin());
+if (!cache.ok) {
+  throw cache.error;
 }
 
 const created = await client.createPlayer('guild:1', {
@@ -75,8 +78,6 @@ if (!played.ok) {
 
 ## Node Config
 
-Minimal node configuration:
-
 ```ts
 {
   id: 'main',
@@ -85,26 +86,11 @@ Minimal node configuration:
   secure: false,
   password: 'youshallnotpass',
   userId: '123456789012345678',
-  clientName: 'YukiTa/1.0',
   requestTimeoutMs: 10000,
   readyTimeoutMs: 12000,
   healthCheckIntervalMs: 15000,
   resumeSession: true,
   resumeTimeoutMs: 60000
-}
-```
-
-## Resolve + Player Example
-
-```ts
-const resolved = await client.resolve('guild:1', 'daft punk', {
-  sourceHints: ['youtube']
-});
-
-if (resolved.ok && resolved.value.result.kind === 'tracks') {
-  await client.queueAdd('guild:1', {
-    track: resolved.value.result.tracks[0]
-  });
 }
 ```
 
@@ -118,7 +104,7 @@ const gateway = new YukitaGatewayServer(client, {
   path: '/yukita',
   auth: {
     mode: 'hmac',
-    secret: process.env.GATEWAY_SECRET!
+    secret: process.env.GATEWAY_SECRET ?? 'change-me'
   },
   allowedOrigins: ['https://example.com'],
   rateLimit: {
@@ -130,38 +116,72 @@ const gateway = new YukitaGatewayServer(client, {
 await gateway.start();
 ```
 
-## Documentation
+## Plugin Example
 
-- `docs/architecture.md`
-- `docs/events.md`
-- `docs/error-codes.md`
-- `docs/plugins.md`
-- `docs/gateway-protocol.md`
+```ts
+import {
+  ok,
+  type PluginInitContext,
+  type Result,
+  type YukitaPlugin
+} from '@yukita/plugin-kit';
+
+class HelloPlugin implements YukitaPlugin {
+  public readonly name = 'hello-plugin';
+  public readonly version = '1.0.0';
+  public readonly compatibleRange = '^1.0.0';
+
+  public async init(ctx: PluginInitContext): Promise<void | Result<void>> {
+    ctx.registerHooks({
+      onTrackEvent: (event) => {
+        if (event.type === 'started') {
+          ctx.logger.info('Track started', { contextId: event.contextId });
+        }
+      }
+    });
+
+    const extension = ctx.extendApi('hello', {
+      ping: () => 'pong'
+    });
+    if (!extension.ok) {
+      return extension;
+    }
+
+    return ok(undefined);
+  }
+}
+```
+
+## Docs (GitHub Pages)
+
+- Local dev: `pnpm docs:dev`
+- Production build: `pnpm docs:build`
+- Main pages:
+  - `/quick-start`
+  - `/guides/plugin-development`
+  - `/reference/architecture`
+  - `/reference/events`
+  - `/reference/error-codes`
+  - `/reference/gateway-protocol`
+  - `/reference/plugins`
 
 ## Commands
 
 - `pnpm lint`
 - `pnpm typecheck`
-- `pnpm typecheck:examples`
 - `pnpm test`
 - `pnpm build`
 - `pnpm check`
-- `pnpm examples:basic`
-- `pnpm examples:gateway`
-- `pnpm examples:discord`
+- `pnpm docs:dev`
+- `pnpm docs:build`
 
-`examples/gateway.ts` exits automatically after a short demo window.
-Set `GATEWAY_EXAMPLE_KEEP_ALIVE=1` to keep the gateway running.
+## CI / Release
 
-`examples/discord-bot.ts` is a full bot example with commands that cover:
-`join/move/leave`, `play/pause/resume/stop/seek/volume`, queue operations,
-filters, repeat modes, node management, resolver, metrics and resolve-cache plugin APIs.
+- CI workflow: `.github/workflows/ci.yml`
+- GitHub Pages deploy: `.github/workflows/docs-pages.yml`
+- npm publish from tags (`v*.*.*`): `.github/workflows/publish.yml`
+- Version sync helper: `pnpm version:all <x.y.z>`
 
-Minimal env for Discord example:
+## License
 
-```bash
-DISCORD_TOKEN=your_bot_token
-LAVALINK_HOST=127.0.0.1
-LAVALINK_PORT=2333
-LAVALINK_PASSWORD=youshallnotpass
-```
+MIT

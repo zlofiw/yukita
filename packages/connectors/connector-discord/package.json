@@ -2,6 +2,7 @@
   "name": "@yukita/connector-discord",
   "version": "1.0.0",
   "description": "Discord voice update connector for YukiTa core.",
+  "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -16,6 +17,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
     "typecheck": "tsc -p tsconfig.json --noEmit",

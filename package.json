@@ -7,16 +7,16 @@
   "scripts": {
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
-    "typecheck:examples": "tsc -p tsconfig.examples.json --noEmit",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
     "test:unit": "pnpm -r test:unit",
     "test:integration": "pnpm --filter @yukita/core test:integration",
-    "check": "pnpm lint && pnpm typecheck && pnpm typecheck:examples && pnpm test && pnpm build",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm docs:build",
     "ci": "pnpm check",
-    "examples:basic": "pnpm tsx --tsconfig tsconfig.base.json examples/basic.ts",
-    "examples:gateway": "pnpm tsx --tsconfig tsconfig.base.json examples/gateway.ts",
-    "examples:discord": "pnpm tsx --tsconfig tsconfig.base.json examples/discord-bot.ts"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "version:all": "node scripts/set-version.mjs"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.9",
@@ -24,12 +24,11 @@
     "@types/ws": "^8.5.14",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
-    "discord.js": "^14.19.3",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "tsup": "^8.3.5",
-    "tsx": "^4.19.2",
     "typescript": "^5.7.3",
+    "vitepress": "^1.6.4",
     "vitest": "^2.1.8"
   }
 }

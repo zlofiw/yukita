@@ -1,0 +1,87 @@
+name: Publish npm
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify package versions match tag
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+
+          const version = (process.env.GITHUB_REF_NAME || '').replace(/^v/, '');
+          const files = [];
+
+          for (const entry of fs.readdirSync('packages', { withFileTypes: true })) {
+            const packagePath = path.join('packages', entry.name);
+            if (!entry.isDirectory()) {
+              continue;
+            }
+
+            const directManifest = path.join(packagePath, 'package.json');
+            if (fs.existsSync(directManifest)) {
+              files.push(directManifest);
+            }
+
+            for (const nested of fs.readdirSync(packagePath, { withFileTypes: true })) {
+              if (!nested.isDirectory()) {
+                continue;
+              }
+              const nestedManifest = path.join(packagePath, nested.name, 'package.json');
+              if (fs.existsSync(nestedManifest)) {
+                files.push(nestedManifest);
+              }
+            }
+          }
+
+          const mismatches = [];
+          for (const file of files) {
+            const pkg = JSON.parse(fs.readFileSync(file, 'utf8'));
+            if (!pkg.name.startsWith('@yukita/')) {
+              continue;
+            }
+            if (pkg.version !== version) {
+              mismatches.push(pkg.name + '@' + pkg.version);
+            }
+          }
+
+          if (mismatches.length) {
+            console.error('Tag version ' + version + ' does not match: ' + mismatches.join(', '));
+            process.exit(1);
+          }
+          NODE
+
+      - name: Validate
+        run: pnpm check
+
+      - name: Publish packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpm -r --filter "@yukita/*" publish --access public --no-git-checks

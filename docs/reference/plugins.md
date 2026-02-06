@@ -1,10 +1,6 @@
-# Plugins
+# Plugin Hooks
 
-Plugins are installed with:
-
-```ts
-await client.use(plugin);
-```
+Install plugins via `client.use(plugin)`.
 
 ## Contract
 
@@ -17,7 +13,7 @@ interface YukitaPlugin {
 }
 ```
 
-## Hooks
+## Hook Surface
 
 - `beforeResolve(payload)`
 - `afterResolve(request, result)`
@@ -28,25 +24,26 @@ interface YukitaPlugin {
 - `onTrackEvent(event)`
 - `onQueueEvent(event)`
 
-## API Extension
+## Extension Namespaces
 
-Plugins can expose API under a namespace:
+Plugins can expose runtime APIs without prototype patching:
 
 ```ts
 ctx.extendApi('metrics', {
   getSnapshot: () => ({})
 });
-```
 
-Core exposes extensions via:
-
-```ts
 const metrics = client.getExtension<{ getSnapshot: () => unknown }>('metrics');
+if (metrics.ok) {
+  console.log(metrics.value.getSnapshot());
+}
 ```
 
 ## Reference Plugins
 
 - `@yukita/plugins-metrics`
-  - counts resolve/play/event activity.
+  - counters for resolve/play/node/player/track/queue activity.
 - `@yukita/plugins-resolve-cache`
-  - caches resolve results using hooks and short-circuit resolve support.
+  - before/after resolve hooks with TTL cache and short-circuit resolve path.
+
+For a full custom plugin walk-through, see `/guides/plugin-development`.
