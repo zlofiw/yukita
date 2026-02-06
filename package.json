@@ -6,6 +6,7 @@
   "description": "YukiTa audio platform monorepo: core, protocol, gateway, connectors and plugins.",
   "scripts": {
     "build": "pnpm docs:build && pnpm -r build",
+    "build:packages": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
@@ -17,8 +18,8 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "version:all": "node scripts/set-version.mjs",
-    "publish:dry-run": "pnpm -r --filter \"@yukita/*\" publish --access public --dry-run --no-git-checks",
-    "publish:npm": "pnpm -r --filter \"@yukita/*\" publish --access public --no-git-checks"
+    "publish:dry-run": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --dry-run --no-git-checks",
+    "publish:npm": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --no-git-checks"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.9",
