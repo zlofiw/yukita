@@ -1,9 +1,11 @@
-# Players & Queue
+# Плеерлер және кезек
 
-## Player Lifecycle
+## Lifecycle
 
 ```ts
-const created = await client.createPlayer('guild:1', { guildId: '123', shardId: 0 });
+const contextId = guildId;
+
+const created = await client.createPlayer(contextId, { guildId, shardId: 0 });
 if (!created.ok) throw created.error;
 
 const player = created.value;
@@ -12,34 +14,50 @@ const player = created.value;
 Destroy:
 
 ```ts
-await client.destroyPlayer('guild:1');
+await client.destroyPlayer(contextId);
 ```
 
-## Queue
+## Snapshot
+
+Күй `player.snapshot()` арқылы қолжетімді және `player.state` оқиғалары арқылы жіберіледі.
+
+## Кезек
 
 ```ts
-await client.queueAdd('guild:1', { query: 'ytsearch:strobe deadmau5' });
-await client.queueShuffle('guild:1');
-await client.queueClear('guild:1');
+await client.queueAdd(contextId, { query: 'ytsearch:strobe deadmau5' });
+await client.queueShuffle(contextId);
+
+// Repeat mode player ішінде.
+await player.setRepeatMode('queue');
+
+await client.queueClear(contextId);
 ```
 
 ## Playback
 
 ```ts
-await client.play('guild:1', { query: 'ytsearch:daft punk around the world' });
-await client.pause('guild:1');
-await client.resume('guild:1');
-await client.seek('guild:1', 30_000);
-await client.setVolume('guild:1', 100);
+await client.play(contextId, { query: 'ytsearch:daft punk around the world' });
+await client.pause(contextId);
+await client.resume(contextId);
+await client.seek(contextId, 30_000);
+await client.setVolume(contextId, 100);
 ```
 
 ## Voice Connect/Disconnect
 
-If you configured a connector (see [Connectors](./connectors)), you can request join/leave via `YukitaPlayer`:
+Егер коннектор конфигурацияланған болса (қара: [Коннекторлар](./connectors)), join/leave сұрауын `YukitaPlayer` арқылы жасауға болады:
 
 ```ts
 await player.connect('VOICE_CHANNEL_ID');
 await player.disconnect();
 ```
 
-Voice updates (state + server) must still be received from Discord and passed into the client by the connector.
+Voice updates (state + server) бәрібір Discord-тан келіп, коннектор арқылы клиентке берiлуi керек.
+
+## Events
+
+```ts
+const unsubscribe = client.on('track.started', ({ contextId, track }) => {
+  console.log('track started', contextId, track.title);
+});
+```

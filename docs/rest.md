@@ -10,6 +10,13 @@ type LavalinkResponse<T> =
   | { ok: false; kind: 'error' | 'timeout' | 'aborted' | 'invalidPayload'; error: { code; message; details?; cause? }; meta: ... }
 ```
 
+`meta` always contains:
+
+- `requestId`: unique id generated per request
+- `nodeId`: node id from config
+- `endpoint`: e.g. `GET /stats`
+- `tookMs`: duration in milliseconds
+
 ## Example
 
 ```ts
@@ -25,6 +32,14 @@ if (!res.ok) {
 console.log('players', res.value.players, 'took', res.meta.tookMs);
 ```
 
+## Middleware Hooks (Plugins)
+
+Plugins can observe/augment REST calls using hooks:
+
+- `onRestRequest(ctx)`: you can attach extra fields to `ctx.meta`
+- `onRestResponse(ctx, res)`: inspect `res.meta` and `res.value`
+- `onRestError(ctx, error)`: inspect normalized errors
+
 ## Coverage
 
 Typed helpers include:
@@ -36,3 +51,10 @@ Typed helpers include:
 
 For anything else, use `node.rest.raw({ path, method, ... })`.
 
+## Retry and Concurrency
+
+The REST client is intentionally conservative:
+
+- retries only idempotent requests
+- respects `Retry-After` on 429
+- limits in-flight requests via `restConcurrency` (default `4`)

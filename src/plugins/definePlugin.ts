@@ -12,13 +12,13 @@ import type {
 } from './types';
 import type { LavalinkResponse, RestRequestContext, RestResponseContext } from '../lavalink/responses';
 
-type MaybePromise<T> = T | Promise<T>;
+export type MaybePromise<T> = T | Promise<T>;
 
-type HookFn<T> = (payload: T) => MaybePromise<void>;
+export type HookFn<T> = (payload: T) => MaybePromise<void>;
 
-type RestRequestHook = (ctx: RestRequestContext) => MaybePromise<void>;
-type RestResponseHook = <T>(ctx: RestResponseContext<T>, res: LavalinkResponse<T>) => MaybePromise<void>;
-type RestErrorHook = (ctx: RestRequestContext, error: unknown) => MaybePromise<void>;
+export type RestRequestHook = (ctx: RestRequestContext) => MaybePromise<void>;
+export type RestResponseHook = <T>(ctx: RestResponseContext<T>, res: LavalinkResponse<T>) => MaybePromise<void>;
+export type RestErrorHook = (ctx: RestRequestContext, error: unknown) => MaybePromise<void>;
 
 export interface DefinePluginContext {
   coreVersion: string;

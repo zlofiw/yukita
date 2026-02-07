@@ -3,27 +3,29 @@ layout: home
 
 hero:
   name: YukitaSan
-  text: Lavalink v4 Client Library
-  tagline: Discord-library agnostic. Strict TypeScript. Resume-ready.
+  text: Lavalink v4 клиент
+  tagline: Discord кітапханасына тәуелсіз. Strict TypeScript. Resume-ready.
   actions:
     - theme: brand
-      text: Getting Started
+      text: Бастау
       link: ./getting-started
     - theme: alt
       text: WebSocket Gateway
       link: ./gateway
 
 features:
-  - title: Lavalink v4 First
-    details: REST /v4/* + WS /v4/websocket with session resume and reconnect.
-  - title: Connector Pattern
-    details: Shoukaku-style connectors (getId/listen/sendPacket/set). Includes Discord.js connector.
+  - title: Lavalink v4 first
+    details: REST /v4/* + WS /v4/websocket, session resume және reconnect.
+  - title: Connector pattern
+    details: Shoukaku стиліндегі коннекторлар (getId/listen/sendPacket/set). Discord.js коннекторы бар.
   - title: Plugins + Gateway
-    details: Built-in metrics, resolve-cache, and websocket-gateway for browsers.
+    details: Браузер үшін metrics, resolve-cache және websocket-gateway built-in.
 ---
 
-## Next
+## Келесі
 
-- Read: [Getting Started](./getting-started)
-- Integrate: [Connectors](./connectors)
-- Build a UI: [WebSocket Gateway](./gateway)
+- Оқу: [Бастау](./getting-started)
+- Интеграция: [Коннекторлар](./connectors)
+- UI: [WebSocket Gateway](./gateway)
+- Анықтама: [API Reference](./api)
+- Қарау: [Мысалдар](./examples)

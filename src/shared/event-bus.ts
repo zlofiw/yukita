@@ -1,7 +1,7 @@
 import { toYukitaError } from './result';
 import { YukitaErrorCode } from './errors';
 
-type Listener<TPayload> = (payload: TPayload) => void | Promise<void>;
+export type Listener<TPayload> = (payload: TPayload) => void | Promise<void>;
 
 /**
  * Async-safe typed event bus.

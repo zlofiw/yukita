@@ -13,6 +13,11 @@ interface Connector {
 }
 ```
 
+Responsibilities:
+
+- forward `VOICE_STATE_UPDATE` and `VOICE_SERVER_UPDATE` to `client.applyVoiceStateUpdate(...)` / `client.applyVoiceServerUpdate(...)`
+- send OP 4 voice state packets for join/move/leave (`YukitaPlayer.connect()` / `YukitaPlayer.disconnect()`)
+
 ## Discord.js
 
 ```ts
@@ -42,3 +47,12 @@ The connector:
 - listens to `VOICE_STATE_UPDATE` and `VOICE_SERVER_UPDATE`
 - sends OP 4 payloads via `sendPacket(...)`
 
+## OP 4 (Join/Move/Leave)
+
+If a connector is configured, you can request join/leave:
+
+```ts
+const player = (await client.createPlayer(guildId, { guildId, shardId: 0 })).value;
+await player.connect(channelId);
+await player.disconnect();
+```

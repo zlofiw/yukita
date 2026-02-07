@@ -27,6 +27,14 @@ await client.use(
 );
 ```
 
+## Roles
+
+Gateway authorization is role-based:
+
+- `web:read`: subscribe/read-only
+- `bot:control`: can send playback control commands
+- `admin`: full access
+
 ## Auth: Query Token
 
 ```ts
@@ -78,7 +86,35 @@ Send commands:
 { "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"nodes" } }
 { "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"players" } }
 { "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"events" } }
+{ "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"metrics" } }
 ```
 
 The server also supports `context:<id>` topics for per-guild/player streams.
 
+## Commands
+
+Built-in command types:
+
+- `play`, `pause`, `resume`, `stop`, `seek`, `volume`
+- `queue.add`, `queue.remove`, `queue.move`, `queue.clear`, `queue.shuffle`
+- `filters.apply`, `filters.clear`
+
+Each command is sent as:
+
+```json
+{ "op":"cmd", "t":"pause", "id":"...", "ts": 0, "d": { "contextId": "123" } }
+```
+
+## Safety (Redaction)
+
+For `web:read` sessions the gateway redacts sensitive data:
+
+- Discord voice secrets are removed from snapshots
+- `track.encoded` is stripped from events/snapshots unless the session has `bot:control` (or `admin`)
+
+If your UI needs control operations that require `encoded`, authenticate with `bot:control`.
+
+## Custom Topics and Commands (Plugins)
+
+The gateway server can be extended from plugins (publish new topics, register custom commands).
+See `examples/plugin/index.ts`.

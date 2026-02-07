@@ -27,3 +27,5 @@ features:
 - Read: [Getting Started](./getting-started)
 - Integrate: [Connectors](./connectors)
 - Build a UI: [WebSocket Gateway](./gateway)
+- Browse: [API Reference](./api/)
+- See: [Examples](./examples)

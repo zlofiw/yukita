@@ -2,13 +2,16 @@ export { YukitaSan } from './YukitaSan';
 export { CORE_COMPATIBLE_RANGE, CORE_VERSION } from './version';
 
 export { AsyncEventBus, YukitaError, YukitaErrorCode, err, ok, toYukitaError } from './shared';
-export type { Result, YukitaPlaylistModel, YukitaResolveModel, YukitaTrackModel } from './shared';
+export type { Listener, Result, YukitaPlaylistModel, YukitaResolveModel, YukitaTrackModel } from './shared';
 
 export { NodePool } from './lavalink/NodePool';
+export type { NodePoolEvents } from './lavalink/NodePool';
 export { LavalinkNode } from './lavalink/LavalinkNode';
 export type { LavalinkNodeEvents, LavalinkNodeState } from './lavalink/LavalinkNode';
 export { LavalinkRestClient } from './lavalink/LavalinkRestClient';
+export type { JsonValue, LavalinkRestClientHooks, RequestExpectation } from './lavalink/LavalinkRestClient';
 export { LavalinkWsClient } from './lavalink/LavalinkWsClient';
+export type { LavalinkWsEvents } from './lavalink/LavalinkWsClient';
 export { mapLoadResult } from './lavalink/codec';
 export type {
   LavalinkCpuStats,
@@ -29,9 +32,14 @@ export type {
   LavalinkRoutePlannerStatus,
   LavalinkSession,
   LavalinkTrack,
+  LavalinkTrackEndEvent,
   LavalinkTrackInfo,
+  LavalinkTrackExceptionEvent,
+  LavalinkTrackStartEvent,
+  LavalinkTrackStuckEvent,
   LavalinkUpdatePlayer,
   LavalinkVoiceState,
+  LavalinkWebSocketClosedEvent,
   LavalinkWsMessage,
   ProtocolTrackModel,
   ResolverEnvelope,
@@ -46,6 +54,7 @@ export type {
 } from './lavalink/responses';
 
 export { YukitaPlayer } from './lavalink/Player';
+export type { PlayTrackOptions } from './lavalink/Player';
 export { PlayerQueue } from './lavalink/PlayerQueue';
 
 export type {
@@ -81,11 +90,26 @@ export type {
   DiscordVoiceStateUpdate
 } from './connectors';
 
-export type { BeforePlayPayload, BeforeResolvePayload, PluginHooks, PluginInitContext, PluginLogger, YukitaPlugin } from './plugins/types';
+export type {
+  BeforePlayPayload,
+  BeforeResolvePayload,
+  PluginHooks,
+  PluginInitContext,
+  PluginLogger,
+  PluginNodeEvent,
+  PluginPlayerEvent,
+  PluginQueueEvent,
+  PluginTrackEvent,
+  YukitaPlugin
+} from './plugins/types';
 export { definePlugin } from './plugins/definePlugin';
+export type { DefinePluginContext, HookFn, MaybePromise, RestErrorHook, RestRequestHook, RestResponseHook } from './plugins/definePlugin';
 export { MetricsPlugin, createMetricsPlugin } from './plugins/metrics';
+export type { MetricsPluginOptions } from './plugins/metrics';
 export { ResolveCachePlugin, createResolveCachePlugin } from './plugins/resolve-cache';
+export type { ResolveCachePluginOptions } from './plugins/resolve-cache';
 export { WebsocketGatewayPlugin, createWebsocketGatewayPlugin } from './plugins/websocket-gateway';
+export type { WebsocketGatewayPluginOptions } from './plugins/websocket-gateway';
 
 export { YukitaGatewayServer, createGatewayHmacToken } from './gateway';
 export type {

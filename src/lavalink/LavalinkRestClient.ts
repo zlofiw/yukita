@@ -15,9 +15,9 @@ import type {
   RetryPolicy
 } from './types';
 
-type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
+export type JsonValue = null | boolean | number | string | JsonValue[] | { [key: string]: JsonValue };
 
-type RequestExpectation = 'json' | 'text' | 'none';
+export type RequestExpectation = 'json' | 'text' | 'none';
 
 export interface LavalinkRestClientHooks {
   onRequest?: (ctx: RestRequestContext) => void | Promise<void>;
