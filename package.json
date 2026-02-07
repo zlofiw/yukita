@@ -18,8 +18,12 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "version:all": "node scripts/set-version.mjs",
-    "publish:dry-run": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --dry-run --no-git-checks",
-    "publish:npm": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --no-git-checks"
+    "publish:dry-run": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" --filter \"!@yukita/docs\" publish --access public --dry-run --no-git-checks",
+    "publish:npm": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" --filter \"!@yukita/docs\" publish --access public --no-git-checks",
+    "publish:dry-run:all": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --dry-run --no-git-checks",
+    "publish:npm:all": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --no-git-checks",
+    "publish:dry-run:docs": "pnpm --filter @yukita/docs build && pnpm --filter @yukita/docs publish --access public --dry-run --no-git-checks",
+    "publish:npm:docs": "pnpm --filter @yukita/docs build && pnpm --filter @yukita/docs publish --access public --no-git-checks"
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.9",
