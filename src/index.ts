@@ -64,6 +64,8 @@ export type {
   ResolveOutput,
   VoiceServerUpdate,
   VoiceStateUpdate,
+  YukitaSanOptions,
+  YukitaSanEvents,
   YukitaClientOptions,
   YukitaCoreEvents
 } from './types';

@@ -1,6 +1,6 @@
 import { createHmac, randomUUID } from 'crypto';
 import { parse as parseUrl } from 'url';
-import { verify } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import type { YukitaCoreEvents } from '../types';
 import type { YukitaSan } from '../YukitaSan';
 import { YukitaError, YukitaErrorCode, err, ok, type Result, type YukitaResolveModel, type YukitaTrackModel } from '../shared';
@@ -230,8 +230,12 @@ export class YukitaGatewayServer {
       }
       session.claims = claimsResult.value;
       session.authenticated = true;
+      this.sendAck(session, 'auth', randomUUID(), {
+        authenticated: true,
+        roles: session.claims.roles
+      });
     } else {
-      this.sendHello(socket, session.challenge);
+      this.sendHello(session);
       session.authTimer = setTimeout(() => {
         socket.close(4401, 'auth timeout');
       }, 10_000);
@@ -257,7 +261,7 @@ export class YukitaGatewayServer {
     try {
       frame = JSON.parse(chunk.toString()) as GatewayEnvelope;
     } catch {
-      this.sendErrorEnvelope(session.socket, {
+      this.sendErrorEnvelope(session, {
         op: 'err',
         t: 'parse',
         id: randomUUID(),
@@ -353,6 +357,54 @@ export class YukitaGatewayServer {
     commandId: string,
     payload: Record<string, unknown>
   ): Promise<void> {
+    if (!session.claims) {
+      this.sendError(session, commandType, commandId, new YukitaError({
+        code: YukitaErrorCode.AUTH_FAILED,
+        message: 'Not authenticated'
+      }));
+      return;
+    }
+
+    const custom = this.commands.get(commandType);
+    if (custom) {
+      const requiredRoles = custom.requiredRoles;
+      if (requiredRoles?.length && !this.hasAnyRole(session.claims.roles, requiredRoles)) {
+        this.sendError(session, commandType, commandId, new YukitaError({
+          code: YukitaErrorCode.COMMAND_NOT_ALLOWED,
+          message: `Command requires ${requiredRoles.join(' | ')} role`
+        }));
+        return;
+      }
+
+      let exec: Result<object>;
+      try {
+        exec = await custom.handler(
+          {
+            claims: session.claims,
+            subscriptions: session.subscriptions
+          },
+          payload
+        );
+      } catch (error) {
+        exec = err(
+          new YukitaError({
+            code: YukitaErrorCode.INTERNAL_ERROR,
+            message: 'Gateway command handler threw',
+            cause: error,
+            meta: { commandType }
+          })
+        );
+      }
+
+      if (!exec.ok) {
+        this.sendError(session, commandType, commandId, exec.error);
+        return;
+      }
+
+      this.sendAck(session, commandType, commandId, exec.value ?? {});
+      return;
+    }
+
     const controlCommands = new Set([
       'play',
       'pause',
@@ -370,14 +422,6 @@ export class YukitaGatewayServer {
     ]);
 
     const readCommands = new Set(['subscribe', 'unsubscribe']);
-    if (!session.claims) {
-      this.sendError(session, commandType, commandId, new YukitaError({
-        code: YukitaErrorCode.AUTH_FAILED,
-        message: 'Not authenticated'
-      }));
-      return;
-    }
-
     if (controlCommands.has(commandType) && !this.hasAnyRole(session.claims.roles, ['bot:control', 'admin'])) {
       this.sendError(session, commandType, commandId, new YukitaError({
         code: YukitaErrorCode.COMMAND_NOT_ALLOWED,
@@ -493,6 +537,7 @@ export class YukitaGatewayServer {
       const unsubscribe = this.client.on(event, async (payload) => {
         const topics = this.topicsForEvent(event, payload);
         this.broadcast(event, payload, topics);
+        this.maybeBroadcastMetrics();
       });
       this.coreUnsubscribers.push(unsubscribe);
     };
@@ -566,7 +611,7 @@ export class YukitaGatewayServer {
         penalty: node.penalty,
         latencyMs: node.latencyMs
       }));
-      this.sendEnvelope(session.socket, {
+      this.sendEnvelope(session, {
         op: 'event',
         t: 'snapshot.nodes',
         id: randomUUID(),
@@ -584,6 +629,17 @@ export class YukitaGatewayServer {
         id: randomUUID(),
         ts: Date.now(),
         d: { players }
+      });
+      return;
+    }
+
+    if (topic === 'metrics') {
+      this.sendEnvelope(session, {
+        op: 'event',
+        t: 'snapshot.metrics',
+        id: randomUUID(),
+        ts: Date.now(),
+        d: { metrics: this.getMetricsSnapshot() }
       });
       return;
     }
@@ -615,6 +671,177 @@ export class YukitaGatewayServer {
     });
   }
 
+  private hasTopicSubscriber(topic: string): boolean {
+    for (const session of this.sessions.values()) {
+      if (session.subscriptions.has('*') || session.subscriptions.has(topic)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private maybeBroadcastMetrics(): void {
+    if (!this.hasTopicSubscriber('metrics')) {
+      return;
+    }
+
+    const metrics = this.getMetricsSnapshot();
+    if (!metrics) {
+      return;
+    }
+
+    this.publish('metrics', 'metrics.updated', { metrics });
+  }
+
+  private getMetricsSnapshot(): unknown | null {
+    const ext = this.client.getExtension<{ getSnapshot: () => unknown }>('metrics');
+    if (!ext.ok) {
+      return null;
+    }
+    try {
+      return ext.value.getSnapshot();
+    } catch {
+      return null;
+    }
+  }
+
+  private sanitizeFrame(session: GatewaySessionInfo, frame: GatewayEnvelope): GatewayEnvelope | null {
+    if (frame.op !== 'event') {
+      return frame;
+    }
+
+    const isControl = this.hasAnyRole(session.claims.roles, ['bot:control', 'admin']);
+
+    const stripEncoded = (track: unknown): unknown => {
+      if (isControl) {
+        return track;
+      }
+      if (!track || typeof track !== 'object') {
+        return track;
+      }
+
+      const { encoded: _encoded, ...rest } = track as YukitaTrackModel;
+      return rest;
+    };
+
+    const sanitizeResolveModel = (model: unknown): unknown => {
+      if (isControl) {
+        return model;
+      }
+      if (!model || typeof model !== 'object') {
+        return model;
+      }
+
+      const payload = model as YukitaResolveModel;
+      if (payload.kind === 'tracks') {
+        return {
+          ...payload,
+          tracks: Array.isArray(payload.tracks) ? payload.tracks.map(stripEncoded) : []
+        };
+      }
+
+      if (payload.kind === 'playlist') {
+        return {
+          ...payload,
+          playlist: payload.playlist
+            ? {
+                ...payload.playlist,
+                tracks: Array.isArray(payload.playlist.tracks) ? payload.playlist.tracks.map(stripEncoded) : []
+              }
+            : payload.playlist
+        };
+      }
+
+      return model;
+    };
+
+    const sanitizeSnapshot = (snapshot: unknown): unknown => {
+      if (!snapshot || typeof snapshot !== 'object') {
+        return snapshot;
+      }
+
+      const raw = snapshot as any;
+      const voice = raw.voice && typeof raw.voice === 'object'
+        ? {
+            contextId: raw.voice.contextId,
+            guildId: raw.voice.guildId,
+            channelId: raw.voice.channelId ?? null,
+            shardId: raw.voice.shardId ?? 0,
+            connected: Boolean(raw.voice.connected)
+          }
+        : raw.voice;
+
+      return {
+        ...raw,
+        current: stripEncoded(raw.current),
+        queue: Array.isArray(raw.queue) ? raw.queue.map(stripEncoded) : raw.queue,
+        voice
+      };
+    };
+
+    const stripRawEventTrack = (payload: unknown): unknown => {
+      if (isControl) {
+        return payload;
+      }
+      if (!payload || typeof payload !== 'object') {
+        return payload;
+      }
+
+      const raw = payload as any;
+      if (!raw.track || typeof raw.track !== 'object') {
+        return payload;
+      }
+
+      const { encoded: _encoded, ...rest } = raw.track as { encoded?: unknown };
+      return { ...raw, track: rest };
+    };
+
+    const d = frame.d;
+
+    switch (frame.t) {
+      case 'player.created':
+      case 'player.destroyed':
+      case 'player.state':
+        return { ...frame, d: { ...d, snapshot: sanitizeSnapshot(d.snapshot) } };
+      case 'queue.updated':
+        return { ...frame, d: { ...d, queue: Array.isArray(d.queue) ? (d.queue as unknown[]).map(stripEncoded) : d.queue } };
+      case 'track.started':
+      case 'track.ended':
+        return { ...frame, d: { ...d, track: stripEncoded(d.track) } };
+      case 'track.stuck':
+      case 'track.exception':
+        return { ...frame, d: { ...d, payload: stripRawEventTrack(d.payload) } };
+      case 'resolve.completed': {
+        const output = d.output as any;
+        if (!output || typeof output !== 'object') {
+          return frame;
+        }
+        return {
+          ...frame,
+          d: {
+            ...d,
+            output: {
+              ...output,
+              result: sanitizeResolveModel(output.result)
+            }
+          }
+        };
+      }
+      case 'snapshot.players':
+        return {
+          ...frame,
+          d: {
+            ...d,
+            players: Array.isArray(d.players) ? (d.players as unknown[]).map(sanitizeSnapshot) : d.players
+          }
+        };
+      case 'snapshot':
+        return { ...frame, d: { ...d, snapshot: sanitizeSnapshot(d.snapshot) } };
+      default:
+        return frame;
+    }
+  }
+
   private consumeRateLimit(session: SessionState): boolean {
     const now = Date.now();
     if (now - session.windowStartedAt > this.rateLimit.windowMs) {
@@ -629,8 +856,8 @@ export class YukitaGatewayServer {
     return true;
   }
 
-  private sendAck(socket: WebSocket, type: string, id: string, payload: object): void {
-    this.sendEnvelope(socket, {
+  private sendAck(session: SessionState, type: string, id: string, payload: object): void {
+    this.sendEnvelope(session, {
       op: 'ack',
       t: type,
       id,
@@ -639,8 +866,8 @@ export class YukitaGatewayServer {
     });
   }
 
-  private sendError(socket: WebSocket, type: string, id: string, error: YukitaError): void {
-    this.sendErrorEnvelope(socket, {
+  private sendError(session: SessionState, type: string, id: string, error: YukitaError): void {
+    this.sendErrorEnvelope(session, {
       op: 'err',
       t: type,
       id,
@@ -653,15 +880,40 @@ export class YukitaGatewayServer {
     });
   }
 
-  private sendErrorEnvelope(socket: WebSocket, frame: GatewayEnvelope): void {
-    this.sendEnvelope(socket, frame);
+  private sendErrorEnvelope(session: SessionState, frame: GatewayEnvelope): void {
+    this.sendEnvelope(session, frame);
   }
 
-  private sendEnvelope(socket: WebSocket, frame: GatewayEnvelope): void {
+  private sendEnvelope(session: SessionState, frame: GatewayEnvelope): void {
+    const socket = session.socket;
     if (socket.readyState !== WebSocket.OPEN) {
       return;
     }
-    socket.send(JSON.stringify(frame));
+
+    let outbound: GatewayEnvelope | null = frame;
+    if (session.claims) {
+      const info: GatewaySessionInfo = {
+        claims: session.claims,
+        subscriptions: session.subscriptions
+      };
+
+      for (const transform of this.outboundTransforms) {
+        if (!outbound) {
+          break;
+        }
+        try {
+          outbound = transform(info, outbound);
+        } catch (error) {
+          console.error('[yukita-gateway] outbound transform failed', error);
+        }
+      }
+    }
+
+    if (!outbound) {
+      return;
+    }
+
+    socket.send(JSON.stringify(outbound));
   }
 
   private isOriginAllowed(origin: string | undefined): boolean {
@@ -708,14 +960,14 @@ export class YukitaGatewayServer {
     return null;
   }
 
-  private sendHello(socket: WebSocket, challenge: string): void {
-    this.sendEnvelope(socket, {
+  private sendHello(session: SessionState): void {
+    this.sendEnvelope(session, {
       op: 'hello',
       t: 'hello',
       id: randomUUID(),
       ts: Date.now(),
       d: {
-        challenge,
+        challenge: session.challenge,
         auth: ['query', 'subprotocol', 'message']
       }
     });
@@ -724,7 +976,7 @@ export class YukitaGatewayServer {
   private verifyToken(token: string): Result<GatewayClaims> {
     if (this.options.auth.mode === 'jwt') {
       try {
-        const payload = verify(token, this.options.auth.secret, {
+        const payload = jwt.verify(token, this.options.auth.secret, {
           issuer: this.options.auth.issuer,
           audience: this.options.auth.audience
         }) as GatewayClaims;

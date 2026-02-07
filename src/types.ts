@@ -34,12 +34,17 @@ export type RepeatMode = 'none' | 'track' | 'queue';
 /**
  * Client-level options.
  */
-export interface YukitaClientOptions {
+export interface YukitaSanOptions {
   nodes: LavalinkNodeConfig[];
   selectionStrategy?: NodeSelectionStrategy;
   logger?: Partial<PluginLogger>;
   connector?: Connector;
 }
+
+/**
+ * @deprecated Use `YukitaSanOptions`.
+ */
+export type YukitaClientOptions = YukitaSanOptions;
 
 /**
  * Resolve operation options.
@@ -137,7 +142,7 @@ export interface PlayerSnapshot {
 /**
  * Public core event map.
  */
-export interface YukitaCoreEvents {
+export interface YukitaSanEvents {
   'node.connected': { nodeId: string; resumed: boolean };
   'node.disconnected': { nodeId: string; code: number; reason: string };
   'node.error': { nodeId: string; error: Error };
@@ -155,6 +160,11 @@ export interface YukitaCoreEvents {
 }
 
 /**
+ * @deprecated Use `YukitaSanEvents`.
+ */
+export type YukitaCoreEvents = YukitaSanEvents;
+
+/**
  * Plugin list initialization options.
  */
 export interface PluginBootOptions {
@@ -162,7 +172,7 @@ export interface PluginBootOptions {
 }
 
 /**
- * Commands accepted by `YukitaClient.play`.
+ * Commands accepted by `YukitaSan.play`.
  */
 export interface PlayInput {
   query?: string;

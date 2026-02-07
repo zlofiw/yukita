@@ -1,4 +1,4 @@
-import { sign } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 import { ok, type Result } from '../shared';
 import { createGatewayHmacToken, YukitaGatewayServer, type GatewayClaims, type GatewayServerOptions } from '../gateway';
 import type { YukitaPlugin } from './types';
@@ -56,7 +56,7 @@ export class WebsocketGatewayPlugin implements YukitaPlugin {
           return createGatewayHmacToken(claims, this.options.auth.secret);
         }
 
-        return sign(claims, this.options.auth.secret, {
+        return jwt.sign(claims, this.options.auth.secret, {
           issuer: this.options.auth.issuer,
           audience: this.options.auth.audience
         });

@@ -1,4 +1,12 @@
-import { definePlugin, YukitaSan, type RestRequestContext } from '../../src';
+import {
+  createWebsocketGatewayPlugin,
+  definePlugin,
+  ok,
+  YukitaSan,
+  type GatewayRole,
+  type RestRequestContext,
+  type YukitaGatewayServer
+} from '../../src';
 
 const RestLogger = definePlugin({
   name: 'rest-logger',
@@ -17,6 +25,34 @@ const RestLogger = definePlugin({
   }
 });
 
+type WebsocketGatewayExtension = {
+  server: YukitaGatewayServer;
+};
+
+const GatewayCustomTopic = definePlugin({
+  name: 'gateway-custom-topic',
+  version: '1.0.0',
+  setup: (ctx) => {
+    const gateway = ctx.client.getExtension<WebsocketGatewayExtension>('websocketGateway');
+    if (!gateway.ok) {
+      ctx.logger.warn('Gateway extension is not available (install websocket-gateway plugin first)');
+      return;
+    }
+
+    // Custom topic example: clients can `subscribe` to `custom` and receive this event.
+    gateway.value.server.publish('custom', 'custom.hello', {
+      message: 'Hello from plugin',
+      ts: Date.now()
+    });
+
+    // Custom command example: clients can `cmd` { t: 'custom.ping' }.
+    gateway.value.server.registerCommand('custom.ping', {
+      requiredRoles: ['web:read', 'admin'] satisfies GatewayRole[],
+      handler: async () => ok({ pong: true, ts: Date.now() })
+    });
+  }
+});
+
 const client = new YukitaSan({
   nodes: [
     {
@@ -29,7 +65,19 @@ const client = new YukitaSan({
   ]
 });
 
+await client.use(
+  createWebsocketGatewayPlugin({
+    port: 8080,
+    path: '/yukitasan',
+    auth: {
+      mode: 'hmac',
+      secret: process.env.GATEWAY_SECRET ?? 'change-me'
+    }
+  })
+);
+
 await client.use(RestLogger);
+await client.use(GatewayCustomTopic);
 await client.start();
 
 const node = client.nodePool.getNode('main');
@@ -39,4 +87,3 @@ if (node) {
 }
 
 await client.shutdown();
-

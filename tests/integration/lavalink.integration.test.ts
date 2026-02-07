@@ -67,6 +67,7 @@ describeIf('core + lavalink integration', () => {
   });
 
   it('runs player flow and emits events', async () => {
+    const guildId = '111111111111111111';
     const seen: string[] = [];
     const unsubs = [
       client.on('player.created', () => {
@@ -82,7 +83,7 @@ describeIf('core + lavalink integration', () => {
 
     try {
       const created = await client.createPlayer('ctx:integration-play', {
-        guildId: 'guild-integration-play',
+        guildId,
         shardId: 0
       });
       expect(created.ok).toBe(true);
@@ -93,26 +94,23 @@ describeIf('core + lavalink integration', () => {
       expect(seen).toContain('player.created');
       expect(seen).toContain('resolve.completed');
 
-      if (!resolved.ok) {
-        return;
+      // REST smoke for player endpoints (does not require real Discord voice state).
+      const node = client.nodePool.getNode('integration');
+      expect(node).toBeTruthy();
+      if (node?.sessionId) {
+        const updated = await node.rest.updatePlayer({
+          sessionId: node.sessionId,
+          guildId,
+          payload: {
+            paused: true,
+            volume: 42
+          }
+        });
+        expect(updated.ok).toBe(true);
+
+        const fetched = await node.rest.getPlayer({ sessionId: node.sessionId, guildId });
+        expect(fetched.ok).toBe(true);
       }
-
-      const result = resolved.value.result;
-      const track = result.kind === 'tracks'
-        ? result.tracks[0]
-        : result.kind === 'playlist'
-          ? result.playlist.tracks[0]
-          : undefined;
-
-      if (!track) {
-        return;
-      }
-
-      const queued = await client.queueAdd('ctx:integration-play', { track });
-      expect(queued.ok).toBe(true);
-
-      const played = await client.play('ctx:integration-play', { track });
-      expect(played.ok).toBe(true);
     } finally {
       const destroyed = await client.destroyPlayer('ctx:integration-play');
       if (!destroyed.ok) {

@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 import { spawn } from 'node:child_process';
 
-const pnpmBin = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm';
-const args = ['exec', 'vitest', 'run', 'tests/integration'];
+const isWin = process.platform === 'win32';
+const command = isWin ? 'cmd.exe' : 'pnpm';
+const args = isWin
+  ? ['/d', '/s', '/c', 'pnpm exec vitest run tests/integration']
+  : ['exec', 'vitest', 'run', 'tests/integration'];
 
-const child = spawn(pnpmBin, args, {
+const child = spawn(command, args, {
   stdio: 'inherit',
   env: {
     ...process.env,
@@ -15,4 +18,3 @@ const child = spawn(pnpmBin, args, {
 child.on('exit', (code) => {
   process.exit(code ?? 1);
 });
-
