@@ -32,14 +32,11 @@
     "test:unit": "vitest run tests/unit",
     "test:integration": "node scripts/run-integration.mjs",
     "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
-    "ci": "pnpm check",
     "docs:api": "typedoc --options typedoc.json && node scripts/postprocess-typedoc.mjs",
     "docs:dev": "pnpm docs:api && vitepress dev docs",
     "docs:build": "pnpm docs:api && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "version:set": "node scripts/set-version.mjs",
-    "publish:dry-run": "pnpm build && pnpm publish --access public --dry-run --no-git-checks",
-    "publish:npm": "pnpm build && pnpm publish --access public --no-git-checks"
+    "version:set": "node scripts/set-version.mjs"
   },
   "dependencies": {
     "jsonwebtoken": "^9.0.2",
