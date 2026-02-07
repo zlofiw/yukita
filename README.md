@@ -2,6 +2,11 @@
 
 TypeScript-first Lavalink v4 client library for Node.js (Discord-library agnostic via Shoukaku-style connectors).
 
+## Documentation
+
+- Docs: https://yukita.zlofiw.dev
+- API Reference: https://yukita.zlofiw.dev/api/
+
 ## Install
 
 ```bash
@@ -111,4 +116,3 @@ pnpm test:integration
 ## License
 
 MIT
-

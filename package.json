@@ -4,6 +4,21 @@
   "license": "MIT",
   "packageManager": "pnpm@10.28.2",
   "description": "Discord-library agnostic Lavalink v4 client library for Node.js.",
+  "homepage": "https://yukita.zlofiw.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlofiw/yukita.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zlofiw/yukita/issues"
+  },
+  "keywords": [
+    "lavalink",
+    "lavalink-v4",
+    "discord",
+    "music",
+    "typescript"
+  ],
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
