@@ -6,7 +6,7 @@
 
 # Interface: PlayerVoiceState
 
-Defined in: [src/types.ts:102](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L102)
+Defined in: [src/types.ts:102](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L102)
 
 Internal voice connection state.
 
@@ -16,7 +16,7 @@ Internal voice connection state.
 
 > **contextId**: `string`
 
-Defined in: [src/types.ts:103](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L103)
+Defined in: [src/types.ts:103](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L103)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types.ts:103](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **guildId**: `string`
 
-Defined in: [src/types.ts:104](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L104)
+Defined in: [src/types.ts:104](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L104)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types.ts:104](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **channelId**: `string` \| `null`
 
-Defined in: [src/types.ts:105](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L105)
+Defined in: [src/types.ts:105](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L105)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/types.ts:105](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **sessionId**: `string` \| `null`
 
-Defined in: [src/types.ts:106](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L106)
+Defined in: [src/types.ts:106](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L106)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/types.ts:106](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **token**: `string` \| `null`
 
-Defined in: [src/types.ts:107](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L107)
+Defined in: [src/types.ts:107](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L107)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/types.ts:107](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **endpoint**: `string` \| `null`
 
-Defined in: [src/types.ts:108](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L108)
+Defined in: [src/types.ts:108](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L108)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/types.ts:108](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **shardId**: `number`
 
-Defined in: [src/types.ts:109](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L109)
+Defined in: [src/types.ts:109](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L109)
 
 ***
 
@@ -72,4 +72,4 @@ Defined in: [src/types.ts:109](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **connected**: `boolean`
 
-Defined in: [src/types.ts:110](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L110)
+Defined in: [src/types.ts:110](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L110)

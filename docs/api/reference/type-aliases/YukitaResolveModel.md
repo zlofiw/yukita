@@ -8,6 +8,6 @@
 
 > **YukitaResolveModel** = \{ `kind`: `"tracks"`; `tracks`: [`YukitaTrackModel`](../interfaces/YukitaTrackModel.md)[]; \} \| \{ `kind`: `"playlist"`; `playlist`: [`YukitaPlaylistModel`](../interfaces/YukitaPlaylistModel.md); \} \| \{ `kind`: `"noMatches"`; \} \| \{ `kind`: `"loadFailed"`; `message`: `string`; `severity`: `"common"` \| `"suspicious"` \| `"fault"`; `cause?`: `string`; \}
 
-Defined in: [src/shared/models.ts:32](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L32)
+Defined in: [src/shared/models.ts:32](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L32)
 
 Normalized resolve output contract.

@@ -6,7 +6,7 @@
 
 # Interface: NodePoolEvents
 
-Defined in: [src/lavalink/NodePool.ts:9](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L9)
+Defined in: [src/lavalink/NodePool.ts:9](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L9)
 
 Node pool event map.
 
@@ -16,7 +16,7 @@ Node pool event map.
 
 > **node.connected**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:10](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L10)
+Defined in: [src/lavalink/NodePool.ts:10](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L10)
 
 #### nodeId
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/NodePool.ts:10](https://github.com/zlofiw/yukita/blob/
 
 > **node.disconnected**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:11](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L11)
+Defined in: [src/lavalink/NodePool.ts:11](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L11)
 
 #### nodeId
 
@@ -52,7 +52,7 @@ Defined in: [src/lavalink/NodePool.ts:11](https://github.com/zlofiw/yukita/blob/
 
 > **node.error**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:12](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L12)
+Defined in: [src/lavalink/NodePool.ts:12](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L12)
 
 #### nodeId
 
@@ -68,7 +68,7 @@ Defined in: [src/lavalink/NodePool.ts:12](https://github.com/zlofiw/yukita/blob/
 
 > **node.stats**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:13](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L13)
+Defined in: [src/lavalink/NodePool.ts:13](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L13)
 
 #### nodeId
 
@@ -84,7 +84,7 @@ Defined in: [src/lavalink/NodePool.ts:13](https://github.com/zlofiw/yukita/blob/
 
 > **node.playerUpdate**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:14](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L14)
+Defined in: [src/lavalink/NodePool.ts:14](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L14)
 
 #### nodeId
 
@@ -100,7 +100,7 @@ Defined in: [src/lavalink/NodePool.ts:14](https://github.com/zlofiw/yukita/blob/
 
 > **node.playerEvent**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:15](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L15)
+Defined in: [src/lavalink/NodePool.ts:15](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L15)
 
 #### nodeId
 
@@ -116,7 +116,7 @@ Defined in: [src/lavalink/NodePool.ts:15](https://github.com/zlofiw/yukita/blob/
 
 > **node.raw**: `object`
 
-Defined in: [src/lavalink/NodePool.ts:16](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L16)
+Defined in: [src/lavalink/NodePool.ts:16](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L16)
 
 #### nodeId
 

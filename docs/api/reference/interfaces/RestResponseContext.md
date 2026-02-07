@@ -6,7 +6,7 @@
 
 # Interface: RestResponseContext\<T\>
 
-Defined in: [src/lavalink/responses.ts:45](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L45)
+Defined in: [src/lavalink/responses.ts:45](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L45)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in: [src/lavalink/responses.ts:45](https://github.com/zlofiw/yukita/blob
 
 > **request**: [`RestRequestContext`](RestRequestContext.md)
 
-Defined in: [src/lavalink/responses.ts:46](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L46)
+Defined in: [src/lavalink/responses.ts:46](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L46)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/lavalink/responses.ts:46](https://github.com/zlofiw/yukita/blob
 
 > **status**: `number`
 
-Defined in: [src/lavalink/responses.ts:47](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L47)
+Defined in: [src/lavalink/responses.ts:47](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L47)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: [src/lavalink/responses.ts:47](https://github.com/zlofiw/yukita/blob
 
 > **tookMs**: `number`
 
-Defined in: [src/lavalink/responses.ts:48](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L48)
+Defined in: [src/lavalink/responses.ts:48](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L48)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: [src/lavalink/responses.ts:48](https://github.com/zlofiw/yukita/blob
 
 > **payload**: `T`
 
-Defined in: [src/lavalink/responses.ts:49](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L49)
+Defined in: [src/lavalink/responses.ts:49](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L49)

@@ -6,7 +6,7 @@
 
 # Class: ResolveCachePlugin
 
-Defined in: [src/plugins/resolve-cache.ts:32](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L32)
+Defined in: [src/plugins/resolve-cache.ts:32](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L32)
 
 Resolve cache plugin using before/after resolve hooks.
 
@@ -20,7 +20,7 @@ Resolve cache plugin using before/after resolve hooks.
 
 > **new ResolveCachePlugin**(`options?`): `ResolveCachePlugin`
 
-Defined in: [src/plugins/resolve-cache.ts:44](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L44)
+Defined in: [src/plugins/resolve-cache.ts:44](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L44)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/plugins/resolve-cache.ts:44](https://github.com/zlofiw/yukita/b
 
 > `readonly` **name**: `"resolve-cache"` = `'resolve-cache'`
 
-Defined in: [src/plugins/resolve-cache.ts:33](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L33)
+Defined in: [src/plugins/resolve-cache.ts:33](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L33)
 
 #### Implementation of
 
@@ -50,7 +50,7 @@ Defined in: [src/plugins/resolve-cache.ts:33](https://github.com/zlofiw/yukita/b
 
 > `readonly` **version**: `"0.1.0"` = `CORE_VERSION`
 
-Defined in: [src/plugins/resolve-cache.ts:34](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L34)
+Defined in: [src/plugins/resolve-cache.ts:34](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L34)
 
 #### Implementation of
 
@@ -62,7 +62,7 @@ Defined in: [src/plugins/resolve-cache.ts:34](https://github.com/zlofiw/yukita/b
 
 > `readonly` **compatibleRange**: `"^0.1.0"` = `CORE_COMPATIBLE_RANGE`
 
-Defined in: [src/plugins/resolve-cache.ts:35](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L35)
+Defined in: [src/plugins/resolve-cache.ts:35](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L35)
 
 #### Implementation of
 
@@ -74,7 +74,7 @@ Defined in: [src/plugins/resolve-cache.ts:35](https://github.com/zlofiw/yukita/b
 
 > **init**(`ctx`): [`Result`](../type-aliases/Result.md)\<`undefined`\>
 
-Defined in: [src/plugins/resolve-cache.ts:50](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L50)
+Defined in: [src/plugins/resolve-cache.ts:50](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L50)
 
 #### Parameters
 

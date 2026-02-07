@@ -6,7 +6,7 @@
 
 # Interface: VoiceStateUpdate
 
-Defined in: [src/types.ts:79](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L79)
+Defined in: [src/types.ts:79](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L79)
 
 Voice state update from connectors.
 
@@ -16,7 +16,7 @@ Voice state update from connectors.
 
 > **contextId**: `string`
 
-Defined in: [src/types.ts:80](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L80)
+Defined in: [src/types.ts:80](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L80)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types.ts:80](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **guildId**: `string`
 
-Defined in: [src/types.ts:81](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L81)
+Defined in: [src/types.ts:81](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L81)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types.ts:81](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **channelId**: `string` \| `null`
 
-Defined in: [src/types.ts:82](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L82)
+Defined in: [src/types.ts:82](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L82)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/types.ts:82](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **sessionId**: `string`
 
-Defined in: [src/types.ts:83](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L83)
+Defined in: [src/types.ts:83](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L83)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/types.ts:83](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **shardId**: `number`
 
-Defined in: [src/types.ts:84](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L84)
+Defined in: [src/types.ts:84](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L84)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/types.ts:84](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > `optional` **selfMute**: `boolean`
 
-Defined in: [src/types.ts:85](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L85)
+Defined in: [src/types.ts:85](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L85)
 
 ***
 
@@ -64,4 +64,4 @@ Defined in: [src/types.ts:85](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > `optional` **selfDeaf**: `boolean`
 
-Defined in: [src/types.ts:86](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L86)
+Defined in: [src/types.ts:86](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L86)

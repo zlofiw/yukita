@@ -6,7 +6,7 @@
 
 # Interface: YukitaSanEvents
 
-Defined in: [src/types.ts:145](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L145)
+Defined in: [src/types.ts:145](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L145)
 
 Public core event map.
 
@@ -16,7 +16,7 @@ Public core event map.
 
 > **node.connected**: `object`
 
-Defined in: [src/types.ts:146](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L146)
+Defined in: [src/types.ts:146](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L146)
 
 #### nodeId
 
@@ -32,7 +32,7 @@ Defined in: [src/types.ts:146](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **node.disconnected**: `object`
 
-Defined in: [src/types.ts:147](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L147)
+Defined in: [src/types.ts:147](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L147)
 
 #### nodeId
 
@@ -52,7 +52,7 @@ Defined in: [src/types.ts:147](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **node.error**: `object`
 
-Defined in: [src/types.ts:148](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L148)
+Defined in: [src/types.ts:148](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L148)
 
 #### nodeId
 
@@ -68,7 +68,7 @@ Defined in: [src/types.ts:148](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **node.stats**: `object`
 
-Defined in: [src/types.ts:149](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L149)
+Defined in: [src/types.ts:149](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L149)
 
 #### nodeId
 
@@ -84,7 +84,7 @@ Defined in: [src/types.ts:149](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **player.created**: `object`
 
-Defined in: [src/types.ts:150](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L150)
+Defined in: [src/types.ts:150](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L150)
 
 #### contextId
 
@@ -100,7 +100,7 @@ Defined in: [src/types.ts:150](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **player.destroyed**: `object`
 
-Defined in: [src/types.ts:151](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L151)
+Defined in: [src/types.ts:151](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L151)
 
 #### contextId
 
@@ -116,7 +116,7 @@ Defined in: [src/types.ts:151](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **player.state**: `object`
 
-Defined in: [src/types.ts:152](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L152)
+Defined in: [src/types.ts:152](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L152)
 
 #### contextId
 
@@ -136,7 +136,7 @@ Defined in: [src/types.ts:152](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **track.started**: `object`
 
-Defined in: [src/types.ts:153](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L153)
+Defined in: [src/types.ts:153](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L153)
 
 #### contextId
 
@@ -156,7 +156,7 @@ Defined in: [src/types.ts:153](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **track.ended**: `object`
 
-Defined in: [src/types.ts:154](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L154)
+Defined in: [src/types.ts:154](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L154)
 
 #### contextId
 
@@ -180,7 +180,7 @@ Defined in: [src/types.ts:154](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **track.stuck**: `object`
 
-Defined in: [src/types.ts:155](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L155)
+Defined in: [src/types.ts:155](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L155)
 
 #### contextId
 
@@ -200,7 +200,7 @@ Defined in: [src/types.ts:155](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **track.exception**: `object`
 
-Defined in: [src/types.ts:156](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L156)
+Defined in: [src/types.ts:156](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L156)
 
 #### contextId
 
@@ -220,7 +220,7 @@ Defined in: [src/types.ts:156](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **queue.updated**: `object`
 
-Defined in: [src/types.ts:157](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L157)
+Defined in: [src/types.ts:157](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L157)
 
 #### contextId
 
@@ -240,7 +240,7 @@ Defined in: [src/types.ts:157](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **resolve.completed**: `object`
 
-Defined in: [src/types.ts:158](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L158)
+Defined in: [src/types.ts:158](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L158)
 
 #### contextId
 
@@ -260,7 +260,7 @@ Defined in: [src/types.ts:158](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **resolve.failed**: `object`
 
-Defined in: [src/types.ts:159](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L159)
+Defined in: [src/types.ts:159](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L159)
 
 #### contextId
 

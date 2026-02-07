@@ -6,7 +6,7 @@
 
 # Interface: LavalinkCpuStats
 
-Defined in: [src/lavalink/types.ts:144](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L144)
+Defined in: [src/lavalink/types.ts:144](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L144)
 
 Lavalink cpu stats.
 
@@ -16,7 +16,7 @@ Lavalink cpu stats.
 
 > **cores**: `number`
 
-Defined in: [src/lavalink/types.ts:145](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L145)
+Defined in: [src/lavalink/types.ts:145](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L145)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:145](https://github.com/zlofiw/yukita/blob/17
 
 > **systemLoad**: `number`
 
-Defined in: [src/lavalink/types.ts:146](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L146)
+Defined in: [src/lavalink/types.ts:146](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L146)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [src/lavalink/types.ts:146](https://github.com/zlofiw/yukita/blob/17
 
 > **lavalinkLoad**: `number`
 
-Defined in: [src/lavalink/types.ts:147](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L147)
+Defined in: [src/lavalink/types.ts:147](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L147)

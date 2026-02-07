@@ -6,7 +6,7 @@
 
 # Interface: LavalinkPlaylist
 
-Defined in: [src/lavalink/types.ts:78](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L78)
+Defined in: [src/lavalink/types.ts:78](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L78)
 
 Lavalink playlist model.
 
@@ -16,7 +16,7 @@ Lavalink playlist model.
 
 > **encoded**: `string`
 
-Defined in: [src/lavalink/types.ts:79](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L79)
+Defined in: [src/lavalink/types.ts:79](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L79)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:79](https://github.com/zlofiw/yukita/blob/174
 
 > **info**: `object`
 
-Defined in: [src/lavalink/types.ts:80](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L80)
+Defined in: [src/lavalink/types.ts:80](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L80)
 
 #### name
 
@@ -40,7 +40,7 @@ Defined in: [src/lavalink/types.ts:80](https://github.com/zlofiw/yukita/blob/174
 
 > `optional` **pluginInfo**: `unknown`
 
-Defined in: [src/lavalink/types.ts:84](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L84)
+Defined in: [src/lavalink/types.ts:84](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L84)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: [src/lavalink/types.ts:84](https://github.com/zlofiw/yukita/blob/174
 
 > **tracks**: [`LavalinkTrack`](LavalinkTrack.md)[]
 
-Defined in: [src/lavalink/types.ts:85](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L85)
+Defined in: [src/lavalink/types.ts:85](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L85)

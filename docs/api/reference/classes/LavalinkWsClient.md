@@ -6,7 +6,7 @@
 
 # Class: LavalinkWsClient
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:32](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L32)
+Defined in: [src/lavalink/LavalinkWsClient.ts:32](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L32)
 
 Lavalink websocket client with reconnect/backoff support.
 
@@ -16,7 +16,7 @@ Lavalink websocket client with reconnect/backoff support.
 
 > **new LavalinkWsClient**(`config`): `LavalinkWsClient`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:45](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L45)
+Defined in: [src/lavalink/LavalinkWsClient.ts:45](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L45)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:45](https://github.com/zlofiw/yuki
 
 > `readonly` **events**: [`AsyncEventBus`](AsyncEventBus.md)\<[`LavalinkWsEvents`](../interfaces/LavalinkWsEvents.md)\>
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:33](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L33)
+Defined in: [src/lavalink/LavalinkWsClient.ts:33](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L33)
 
 ## Accessors
 
@@ -44,7 +44,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:33](https://github.com/zlofiw/yuki
 
 > **get** **sessionId**(): `string` \| `null`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:56](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L56)
+Defined in: [src/lavalink/LavalinkWsClient.ts:56](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L56)
 
 Last known session id.
 
@@ -58,7 +58,7 @@ Last known session id.
 
 > **connect**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:63](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L63)
+Defined in: [src/lavalink/LavalinkWsClient.ts:63](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L63)
 
 Opens websocket connection.
 
@@ -72,7 +72,7 @@ Opens websocket connection.
 
 > **waitForReady**(`timeoutMs`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`LavalinkReadyPayload`](../interfaces/LavalinkReadyPayload.md)\>\>
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:81](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L81)
+Defined in: [src/lavalink/LavalinkWsClient.ts:81](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L81)
 
 Waits for lavalink ready payload.
 
@@ -92,7 +92,7 @@ Waits for lavalink ready payload.
 
 > **disconnect**(): `Promise`\<`void`\>
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:108](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L108)
+Defined in: [src/lavalink/LavalinkWsClient.ts:108](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L108)
 
 Closes websocket and disables reconnect.
 
@@ -106,7 +106,7 @@ Closes websocket and disables reconnect.
 
 > **destroy**(): `Promise`\<`void`\>
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:134](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L134)
+Defined in: [src/lavalink/LavalinkWsClient.ts:134](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L134)
 
 Destroys websocket client and all listeners.
 

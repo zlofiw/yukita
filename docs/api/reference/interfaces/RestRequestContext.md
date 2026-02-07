@@ -6,7 +6,7 @@
 
 # Interface: RestRequestContext
 
-Defined in: [src/lavalink/responses.ts:31](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L31)
+Defined in: [src/lavalink/responses.ts:31](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L31)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/lavalink/responses.ts:31](https://github.com/zlofiw/yukita/blob
 
 > **requestId**: `string`
 
-Defined in: [src/lavalink/responses.ts:32](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L32)
+Defined in: [src/lavalink/responses.ts:32](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L32)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/lavalink/responses.ts:32](https://github.com/zlofiw/yukita/blob
 
 > **nodeId**: `string`
 
-Defined in: [src/lavalink/responses.ts:33](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L33)
+Defined in: [src/lavalink/responses.ts:33](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L33)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/lavalink/responses.ts:33](https://github.com/zlofiw/yukita/blob
 
 > **endpoint**: `string`
 
-Defined in: [src/lavalink/responses.ts:34](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L34)
+Defined in: [src/lavalink/responses.ts:34](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L34)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [src/lavalink/responses.ts:34](https://github.com/zlofiw/yukita/blob
 
 > **method**: `string`
 
-Defined in: [src/lavalink/responses.ts:35](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L35)
+Defined in: [src/lavalink/responses.ts:35](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L35)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/lavalink/responses.ts:35](https://github.com/zlofiw/yukita/blob
 
 > **path**: `string`
 
-Defined in: [src/lavalink/responses.ts:36](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L36)
+Defined in: [src/lavalink/responses.ts:36](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L36)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [src/lavalink/responses.ts:36](https://github.com/zlofiw/yukita/blob
 
 > **url**: `string`
 
-Defined in: [src/lavalink/responses.ts:37](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L37)
+Defined in: [src/lavalink/responses.ts:37](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L37)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [src/lavalink/responses.ts:37](https://github.com/zlofiw/yukita/blob
 
 > **attempt**: `number`
 
-Defined in: [src/lavalink/responses.ts:38](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L38)
+Defined in: [src/lavalink/responses.ts:38](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L38)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [src/lavalink/responses.ts:38](https://github.com/zlofiw/yukita/blob
 
 > **startedAt**: `number`
 
-Defined in: [src/lavalink/responses.ts:39](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L39)
+Defined in: [src/lavalink/responses.ts:39](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L39)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [src/lavalink/responses.ts:39](https://github.com/zlofiw/yukita/blob
 
 > **timeoutMs**: `number`
 
-Defined in: [src/lavalink/responses.ts:40](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L40)
+Defined in: [src/lavalink/responses.ts:40](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L40)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [src/lavalink/responses.ts:40](https://github.com/zlofiw/yukita/blob
 
 > **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [src/lavalink/responses.ts:41](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L41)
+Defined in: [src/lavalink/responses.ts:41](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L41)
 
 ***
 
@@ -94,4 +94,4 @@ Defined in: [src/lavalink/responses.ts:41](https://github.com/zlofiw/yukita/blob
 
 > **meta**: `Record`\<`string`, `unknown`\>
 
-Defined in: [src/lavalink/responses.ts:42](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/responses.ts#L42)
+Defined in: [src/lavalink/responses.ts:42](https://github.com/zlofiw/yukita/blob/main/src/lavalink/responses.ts#L42)

@@ -6,7 +6,7 @@
 
 # Class: PlayerQueue
 
-Defined in: [src/lavalink/PlayerQueue.ts:7](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L7)
+Defined in: [src/lavalink/PlayerQueue.ts:7](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L7)
 
 Queue model with repeat and mutation operations.
 
@@ -28,7 +28,7 @@ Queue model with repeat and mutation operations.
 
 > **get** **value**(): readonly [`YukitaTrackModel`](../interfaces/YukitaTrackModel.md)[]
 
-Defined in: [src/lavalink/PlayerQueue.ts:14](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L14)
+Defined in: [src/lavalink/PlayerQueue.ts:14](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L14)
 
 Returns readonly queue items.
 
@@ -44,7 +44,7 @@ readonly [`YukitaTrackModel`](../interfaces/YukitaTrackModel.md)[]
 
 > **get** **repeat**(): [`RepeatMode`](../type-aliases/RepeatMode.md)
 
-Defined in: [src/lavalink/PlayerQueue.ts:21](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L21)
+Defined in: [src/lavalink/PlayerQueue.ts:21](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L21)
 
 Returns current repeat mode.
 
@@ -58,7 +58,7 @@ Returns current repeat mode.
 
 > **setRepeat**(`mode`): `void`
 
-Defined in: [src/lavalink/PlayerQueue.ts:28](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L28)
+Defined in: [src/lavalink/PlayerQueue.ts:28](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L28)
 
 Sets repeat mode.
 
@@ -78,7 +78,7 @@ Sets repeat mode.
 
 > **add**(`track`): [`Result`](../type-aliases/Result.md)\<`number`\>
 
-Defined in: [src/lavalink/PlayerQueue.ts:35](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L35)
+Defined in: [src/lavalink/PlayerQueue.ts:35](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L35)
 
 Adds one or more tracks.
 
@@ -98,7 +98,7 @@ Adds one or more tracks.
 
 > **remove**(`index`): [`Result`](../type-aliases/Result.md)\<[`YukitaTrackModel`](../interfaces/YukitaTrackModel.md)\>
 
-Defined in: [src/lavalink/PlayerQueue.ts:44](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L44)
+Defined in: [src/lavalink/PlayerQueue.ts:44](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L44)
 
 Removes track by index.
 
@@ -118,7 +118,7 @@ Removes track by index.
 
 > **move**(`fromIndex`, `toIndex`): [`Result`](../type-aliases/Result.md)\<`void`\>
 
-Defined in: [src/lavalink/PlayerQueue.ts:65](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L65)
+Defined in: [src/lavalink/PlayerQueue.ts:65](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L65)
 
 Moves track from index to index.
 
@@ -142,7 +142,7 @@ Moves track from index to index.
 
 > **clear**(): `void`
 
-Defined in: [src/lavalink/PlayerQueue.ts:93](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L93)
+Defined in: [src/lavalink/PlayerQueue.ts:93](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L93)
 
 Clears queue.
 
@@ -156,7 +156,7 @@ Clears queue.
 
 > **shuffle**(): `void`
 
-Defined in: [src/lavalink/PlayerQueue.ts:100](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L100)
+Defined in: [src/lavalink/PlayerQueue.ts:100](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L100)
 
 Shuffles queue in-place.
 
@@ -170,7 +170,7 @@ Shuffles queue in-place.
 
 > **next**(`current`): [`YukitaTrackModel`](../interfaces/YukitaTrackModel.md) \| `null`
 
-Defined in: [src/lavalink/PlayerQueue.ts:110](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/PlayerQueue.ts#L110)
+Defined in: [src/lavalink/PlayerQueue.ts:110](https://github.com/zlofiw/yukita/blob/main/src/lavalink/PlayerQueue.ts#L110)
 
 Consumes next track based on repeat mode.
 

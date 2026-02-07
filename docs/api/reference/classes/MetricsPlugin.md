@@ -6,7 +6,7 @@
 
 # Class: MetricsPlugin
 
-Defined in: [src/plugins/metrics.ts:28](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/metrics.ts#L28)
+Defined in: [src/plugins/metrics.ts:28](https://github.com/zlofiw/yukita/blob/main/src/plugins/metrics.ts#L28)
 
 Reference plugin that tracks operation counters.
 
@@ -20,7 +20,7 @@ Reference plugin that tracks operation counters.
 
 > **new MetricsPlugin**(`options?`): `MetricsPlugin`
 
-Defined in: [src/plugins/metrics.ts:43](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/metrics.ts#L43)
+Defined in: [src/plugins/metrics.ts:43](https://github.com/zlofiw/yukita/blob/main/src/plugins/metrics.ts#L43)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/plugins/metrics.ts:43](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **name**: `"metrics"` = `'metrics'`
 
-Defined in: [src/plugins/metrics.ts:29](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/metrics.ts#L29)
+Defined in: [src/plugins/metrics.ts:29](https://github.com/zlofiw/yukita/blob/main/src/plugins/metrics.ts#L29)
 
 #### Implementation of
 
@@ -50,7 +50,7 @@ Defined in: [src/plugins/metrics.ts:29](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **version**: `"0.1.0"` = `CORE_VERSION`
 
-Defined in: [src/plugins/metrics.ts:30](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/metrics.ts#L30)
+Defined in: [src/plugins/metrics.ts:30](https://github.com/zlofiw/yukita/blob/main/src/plugins/metrics.ts#L30)
 
 #### Implementation of
 
@@ -62,7 +62,7 @@ Defined in: [src/plugins/metrics.ts:30](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **compatibleRange**: `"^0.1.0"` = `CORE_COMPATIBLE_RANGE`
 
-Defined in: [src/plugins/metrics.ts:31](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/metrics.ts#L31)
+Defined in: [src/plugins/metrics.ts:31](https://github.com/zlofiw/yukita/blob/main/src/plugins/metrics.ts#L31)
 
 #### Implementation of
 
@@ -74,7 +74,7 @@ Defined in: [src/plugins/metrics.ts:31](https://github.com/zlofiw/yukita/blob/17
 
 > **init**(`ctx`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/plugins/metrics.ts:47](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/metrics.ts#L47)
+Defined in: [src/plugins/metrics.ts:47](https://github.com/zlofiw/yukita/blob/main/src/plugins/metrics.ts#L47)
 
 #### Parameters
 

@@ -1,8 +1,8 @@
-# Connectors
+# Конектори
 
-Connectors are thin adapters that connect YukitaSan to a Discord library.
+Конектори це тонкі адаптери, які з’єднують YukitaSan з вашою Discord-бібліотекою.
 
-They follow the Shoukaku-style contract:
+Контракт у стилі Shoukaku:
 
 ```ts
 interface Connector {
@@ -12,6 +12,11 @@ interface Connector {
   set(manager): void;
 }
 ```
+
+Обов’язки:
+
+- прокидати `VOICE_STATE_UPDATE` та `VOICE_SERVER_UPDATE` у `client.applyVoiceStateUpdate(...)` / `client.applyVoiceServerUpdate(...)`
+- надсилати OP 4 voice state пакети для join/move/leave (`YukitaPlayer.connect()` / `YukitaPlayer.disconnect()`)
 
 ## Discord.js
 
@@ -37,8 +42,17 @@ const client = new YukitaSan({
 });
 ```
 
-The connector:
+Конектор:
 
-- listens to `VOICE_STATE_UPDATE` and `VOICE_SERVER_UPDATE`
-- sends OP 4 payloads via `sendPacket(...)`
+- слухає `VOICE_STATE_UPDATE` та `VOICE_SERVER_UPDATE`
+- надсилає OP 4 payload через `sendPacket(...)`
 
+## OP 4 (Join/Move/Leave)
+
+Якщо конектор налаштовано, можна запросити join/leave:
+
+```ts
+const player = (await client.createPlayer(guildId, { guildId, shardId: 0 })).value;
+await player.connect(channelId);
+await player.disconnect();
+```

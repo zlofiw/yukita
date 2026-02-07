@@ -6,7 +6,7 @@
 
 # Interface: DiscordVoiceStateUpdate
 
-Defined in: [src/connectors/discord-types.ts:4](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L4)
+Defined in: [src/connectors/discord-types.ts:4](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L4)
 
 Discord VOICE_STATE_UPDATE dispatch payload.
 
@@ -16,7 +16,7 @@ Discord VOICE_STATE_UPDATE dispatch payload.
 
 > **guild\_id**: `string`
 
-Defined in: [src/connectors/discord-types.ts:5](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L5)
+Defined in: [src/connectors/discord-types.ts:5](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L5)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/connectors/discord-types.ts:5](https://github.com/zlofiw/yukita
 
 > **channel\_id**: `string` \| `null`
 
-Defined in: [src/connectors/discord-types.ts:6](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L6)
+Defined in: [src/connectors/discord-types.ts:6](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L6)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/connectors/discord-types.ts:6](https://github.com/zlofiw/yukita
 
 > **user\_id**: `string`
 
-Defined in: [src/connectors/discord-types.ts:7](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L7)
+Defined in: [src/connectors/discord-types.ts:7](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L7)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/connectors/discord-types.ts:7](https://github.com/zlofiw/yukita
 
 > **session\_id**: `string`
 
-Defined in: [src/connectors/discord-types.ts:8](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L8)
+Defined in: [src/connectors/discord-types.ts:8](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L8)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/connectors/discord-types.ts:8](https://github.com/zlofiw/yukita
 
 > `optional` **self\_mute**: `boolean`
 
-Defined in: [src/connectors/discord-types.ts:9](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L9)
+Defined in: [src/connectors/discord-types.ts:9](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L9)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [src/connectors/discord-types.ts:9](https://github.com/zlofiw/yukita
 
 > `optional` **self\_deaf**: `boolean`
 
-Defined in: [src/connectors/discord-types.ts:10](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L10)
+Defined in: [src/connectors/discord-types.ts:10](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L10)

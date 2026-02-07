@@ -6,7 +6,7 @@
 
 # Interface: PlayerSnapshot
 
-Defined in: [src/types.ts:128](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L128)
+Defined in: [src/types.ts:128](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L128)
 
 Player snapshot returned by state methods and events.
 
@@ -16,7 +16,7 @@ Player snapshot returned by state methods and events.
 
 > **contextId**: `string`
 
-Defined in: [src/types.ts:129](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L129)
+Defined in: [src/types.ts:129](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L129)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types.ts:129](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **guildId**: `string`
 
-Defined in: [src/types.ts:130](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L130)
+Defined in: [src/types.ts:130](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L130)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types.ts:130](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **nodeId**: `string`
 
-Defined in: [src/types.ts:131](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L131)
+Defined in: [src/types.ts:131](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L131)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/types.ts:131](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **current**: [`YukitaTrackModel`](YukitaTrackModel.md) \| `null`
 
-Defined in: [src/types.ts:132](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L132)
+Defined in: [src/types.ts:132](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L132)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/types.ts:132](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **queue**: [`YukitaTrackModel`](YukitaTrackModel.md)[]
 
-Defined in: [src/types.ts:133](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L133)
+Defined in: [src/types.ts:133](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L133)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/types.ts:133](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **paused**: `boolean`
 
-Defined in: [src/types.ts:134](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L134)
+Defined in: [src/types.ts:134](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L134)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/types.ts:134](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **volume**: `number`
 
-Defined in: [src/types.ts:135](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L135)
+Defined in: [src/types.ts:135](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L135)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [src/types.ts:135](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **positionMs**: `number`
 
-Defined in: [src/types.ts:136](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L136)
+Defined in: [src/types.ts:136](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L136)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [src/types.ts:136](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **repeatMode**: [`RepeatMode`](../type-aliases/RepeatMode.md)
 
-Defined in: [src/types.ts:137](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L137)
+Defined in: [src/types.ts:137](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L137)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [src/types.ts:137](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **filters**: [`LavalinkFilters`](LavalinkFilters.md)
 
-Defined in: [src/types.ts:138](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L138)
+Defined in: [src/types.ts:138](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L138)
 
 ***
 
@@ -96,4 +96,4 @@ Defined in: [src/types.ts:138](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > **voice**: [`PlayerVoiceState`](PlayerVoiceState.md)
 
-Defined in: [src/types.ts:139](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L139)
+Defined in: [src/types.ts:139](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L139)

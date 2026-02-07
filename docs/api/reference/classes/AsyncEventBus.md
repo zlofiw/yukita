@@ -6,7 +6,7 @@
 
 # Class: AsyncEventBus\<TEvents\>
 
-Defined in: [src/shared/event-bus.ts:9](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/event-bus.ts#L9)
+Defined in: [src/shared/event-bus.ts:9](https://github.com/zlofiw/yukita/blob/main/src/shared/event-bus.ts#L9)
 
 Async-safe typed event bus.
 
@@ -32,7 +32,7 @@ Async-safe typed event bus.
 
 > **on**\<`TKey`\>(`event`, `listener`): () => `void`
 
-Defined in: [src/shared/event-bus.ts:15](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/event-bus.ts#L15)
+Defined in: [src/shared/event-bus.ts:15](https://github.com/zlofiw/yukita/blob/main/src/shared/event-bus.ts#L15)
 
 Registers a listener.
 
@@ -66,7 +66,7 @@ Registers a listener.
 
 > **off**\<`TKey`\>(`event`, `listener`): `void`
 
-Defined in: [src/shared/event-bus.ts:25](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/event-bus.ts#L25)
+Defined in: [src/shared/event-bus.ts:25](https://github.com/zlofiw/yukita/blob/main/src/shared/event-bus.ts#L25)
 
 Removes a listener.
 
@@ -96,7 +96,7 @@ Removes a listener.
 
 > **emit**\<`TKey`\>(`event`, `payload`, `onError?`): `Promise`\<`void`\>
 
-Defined in: [src/shared/event-bus.ts:39](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/event-bus.ts#L39)
+Defined in: [src/shared/event-bus.ts:39](https://github.com/zlofiw/yukita/blob/main/src/shared/event-bus.ts#L39)
 
 Emits event to all listeners.
 
@@ -130,7 +130,7 @@ Emits event to all listeners.
 
 > **clear**(): `void`
 
-Defined in: [src/shared/event-bus.ts:66](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/event-bus.ts#L66)
+Defined in: [src/shared/event-bus.ts:66](https://github.com/zlofiw/yukita/blob/main/src/shared/event-bus.ts#L66)
 
 Removes all listeners.
 

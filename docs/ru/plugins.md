@@ -1,8 +1,8 @@
 # Плагины
 
-Плагины ставятся через `client.use(plugin)`: они могут регистрировать hooks и публиковать API через namespaces.
+Плагины устанавливаются через `client.use(plugin)`: они могут регистрировать хуки и публиковать API через namespaces.
 
-Рекомендация: вызывать `client.use(...)` до `client.start()`, чтобы плагин мог хукнуться в старт и REST middleware.
+Рекомендация: вызывать `client.use(...)` до `client.start()`, чтобы плагины успели подключиться к старту и REST middleware.
 
 ## Встроенные плагины
 
@@ -10,7 +10,7 @@
 - `resolve-cache`
 - `websocket-gateway`
 
-Built-ins создаются через:
+Встроенные плагины создаются так:
 
 - `createMetricsPlugin()`
 - `createResolveCachePlugin()`
@@ -59,12 +59,12 @@ ctx.extendApi('my', {
   ping: () => 'pong'
 });
 
-// later:
+// позже:
 const ext = client.getExtension<{ ping: () => string }>('my');
 if (ext.ok) console.log(ext.value.ping());
 ```
 
-## Built-in: metrics
+## Встроенный: metrics
 
 Namespace: `metrics`.
 
@@ -75,7 +75,7 @@ await client.use(createMetricsPlugin());
 const metrics = client.getExtension<{ getSnapshot: () => unknown }>('metrics');
 ```
 
-## Built-in: resolve-cache
+## Встроенный: resolve-cache
 
 Namespace: `resolveCache`.
 
@@ -84,7 +84,7 @@ import { createResolveCachePlugin } from 'yukitasan';
 await client.use(createResolveCachePlugin({ ttlMs: 45_000 }));
 ```
 
-## Built-in: websocket-gateway
+## Встроенный: websocket-gateway
 
 Namespace: `websocketGateway`.
 

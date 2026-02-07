@@ -6,7 +6,7 @@
 
 # Interface: DiscordVoiceStateCommand
 
-Defined in: [src/connectors/discord-types.ts:25](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L25)
+Defined in: [src/connectors/discord-types.ts:25](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L25)
 
 Discord gateway OP 4 payload.
 
@@ -16,7 +16,7 @@ Discord gateway OP 4 payload.
 
 > **op**: `4`
 
-Defined in: [src/connectors/discord-types.ts:26](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L26)
+Defined in: [src/connectors/discord-types.ts:26](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L26)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/connectors/discord-types.ts:26](https://github.com/zlofiw/yukit
 
 > **d**: `object`
 
-Defined in: [src/connectors/discord-types.ts:27](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/discord-types.ts#L27)
+Defined in: [src/connectors/discord-types.ts:27](https://github.com/zlofiw/yukita/blob/main/src/connectors/discord-types.ts#L27)
 
 #### guild\_id
 

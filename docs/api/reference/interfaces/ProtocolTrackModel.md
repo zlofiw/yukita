@@ -6,7 +6,7 @@
 
 # Interface: ProtocolTrackModel
 
-Defined in: [src/lavalink/types.ts:371](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L371)
+Defined in: [src/lavalink/types.ts:371](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L371)
 
 Track model with raw lavalink payload attached.
 
@@ -20,7 +20,7 @@ Track model with raw lavalink payload attached.
 
 > **raw**: [`LavalinkTrack`](LavalinkTrack.md)
 
-Defined in: [src/lavalink/types.ts:372](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L372)
+Defined in: [src/lavalink/types.ts:372](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L372)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [src/lavalink/types.ts:372](https://github.com/zlofiw/yukita/blob/17
 
 > **encoded**: `string`
 
-Defined in: [src/shared/models.ts:5](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L5)
+Defined in: [src/shared/models.ts:5](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L5)
 
 #### Inherited from
 
@@ -40,7 +40,7 @@ Defined in: [src/shared/models.ts:5](https://github.com/zlofiw/yukita/blob/174c6
 
 > **identifier**: `string`
 
-Defined in: [src/shared/models.ts:6](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L6)
+Defined in: [src/shared/models.ts:6](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L6)
 
 #### Inherited from
 
@@ -52,7 +52,7 @@ Defined in: [src/shared/models.ts:6](https://github.com/zlofiw/yukita/blob/174c6
 
 > **title**: `string`
 
-Defined in: [src/shared/models.ts:7](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L7)
+Defined in: [src/shared/models.ts:7](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L7)
 
 #### Inherited from
 
@@ -64,7 +64,7 @@ Defined in: [src/shared/models.ts:7](https://github.com/zlofiw/yukita/blob/174c6
 
 > **author**: `string`
 
-Defined in: [src/shared/models.ts:8](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L8)
+Defined in: [src/shared/models.ts:8](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L8)
 
 #### Inherited from
 
@@ -76,7 +76,7 @@ Defined in: [src/shared/models.ts:8](https://github.com/zlofiw/yukita/blob/174c6
 
 > **lengthMs**: `number`
 
-Defined in: [src/shared/models.ts:9](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L9)
+Defined in: [src/shared/models.ts:9](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L9)
 
 #### Inherited from
 
@@ -88,7 +88,7 @@ Defined in: [src/shared/models.ts:9](https://github.com/zlofiw/yukita/blob/174c6
 
 > **sourceName**: `string`
 
-Defined in: [src/shared/models.ts:10](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L10)
+Defined in: [src/shared/models.ts:10](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L10)
 
 #### Inherited from
 
@@ -100,7 +100,7 @@ Defined in: [src/shared/models.ts:10](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **uri**: `string`
 
-Defined in: [src/shared/models.ts:11](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L11)
+Defined in: [src/shared/models.ts:11](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L11)
 
 #### Inherited from
 
@@ -112,7 +112,7 @@ Defined in: [src/shared/models.ts:11](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **artworkUrl**: `string`
 
-Defined in: [src/shared/models.ts:12](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L12)
+Defined in: [src/shared/models.ts:12](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L12)
 
 #### Inherited from
 
@@ -124,7 +124,7 @@ Defined in: [src/shared/models.ts:12](https://github.com/zlofiw/yukita/blob/174c
 
 > **isStream**: `boolean`
 
-Defined in: [src/shared/models.ts:13](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L13)
+Defined in: [src/shared/models.ts:13](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L13)
 
 #### Inherited from
 
@@ -136,7 +136,7 @@ Defined in: [src/shared/models.ts:13](https://github.com/zlofiw/yukita/blob/174c
 
 > **isSeekable**: `boolean`
 
-Defined in: [src/shared/models.ts:14](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L14)
+Defined in: [src/shared/models.ts:14](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L14)
 
 #### Inherited from
 
@@ -148,7 +148,7 @@ Defined in: [src/shared/models.ts:14](https://github.com/zlofiw/yukita/blob/174c
 
 > **positionMs**: `number`
 
-Defined in: [src/shared/models.ts:15](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L15)
+Defined in: [src/shared/models.ts:15](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L15)
 
 #### Inherited from
 
@@ -160,7 +160,7 @@ Defined in: [src/shared/models.ts:15](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **pluginInfo**: `unknown`
 
-Defined in: [src/shared/models.ts:16](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/models.ts#L16)
+Defined in: [src/shared/models.ts:16](https://github.com/zlofiw/yukita/blob/main/src/shared/models.ts#L16)
 
 #### Inherited from
 

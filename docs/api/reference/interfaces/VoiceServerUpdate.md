@@ -6,7 +6,7 @@
 
 # Interface: VoiceServerUpdate
 
-Defined in: [src/types.ts:92](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L92)
+Defined in: [src/types.ts:92](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L92)
 
 Voice server update from connectors.
 
@@ -16,7 +16,7 @@ Voice server update from connectors.
 
 > **contextId**: `string`
 
-Defined in: [src/types.ts:93](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L93)
+Defined in: [src/types.ts:93](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L93)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types.ts:93](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **guildId**: `string`
 
-Defined in: [src/types.ts:94](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L94)
+Defined in: [src/types.ts:94](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L94)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types.ts:94](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **token**: `string`
 
-Defined in: [src/types.ts:95](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L95)
+Defined in: [src/types.ts:95](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L95)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/types.ts:95](https://github.com/zlofiw/yukita/blob/174c62f77ab5
 
 > **endpoint**: `string`
 
-Defined in: [src/types.ts:96](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L96)
+Defined in: [src/types.ts:96](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L96)

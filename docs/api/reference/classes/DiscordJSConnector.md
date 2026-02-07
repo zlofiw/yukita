@@ -6,7 +6,7 @@
 
 # Class: DiscordJSConnector
 
-Defined in: [src/connectors/DiscordJSConnector.ts:15](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordJSConnector.ts#L15)
+Defined in: [src/connectors/DiscordJSConnector.ts:15](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordJSConnector.ts#L15)
 
 Discord.js connector (Shoukaku-style) for voice updates and OP 4 dispatch.
 
@@ -20,7 +20,7 @@ Discord.js connector (Shoukaku-style) for voice updates and OP 4 dispatch.
 
 > **new DiscordJSConnector**(`client`): `DiscordJSConnector`
 
-Defined in: [src/connectors/DiscordJSConnector.ts:20](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordJSConnector.ts#L20)
+Defined in: [src/connectors/DiscordJSConnector.ts:20](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordJSConnector.ts#L20)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/connectors/DiscordJSConnector.ts:20](https://github.com/zlofiw/
 
 > **set**(`manager`): `void`
 
-Defined in: [src/connectors/DiscordJSConnector.ts:24](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordJSConnector.ts#L24)
+Defined in: [src/connectors/DiscordJSConnector.ts:24](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordJSConnector.ts#L24)
 
 #### Parameters
 
@@ -60,7 +60,7 @@ Defined in: [src/connectors/DiscordJSConnector.ts:24](https://github.com/zlofiw/
 
 > **getId**(): `string`
 
-Defined in: [src/connectors/DiscordJSConnector.ts:28](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordJSConnector.ts#L28)
+Defined in: [src/connectors/DiscordJSConnector.ts:28](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordJSConnector.ts#L28)
 
 #### Returns
 
@@ -76,7 +76,7 @@ Defined in: [src/connectors/DiscordJSConnector.ts:28](https://github.com/zlofiw/
 
 > **listen**(`_nodes`): `void`
 
-Defined in: [src/connectors/DiscordJSConnector.ts:36](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordJSConnector.ts#L36)
+Defined in: [src/connectors/DiscordJSConnector.ts:36](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordJSConnector.ts#L36)
 
 #### Parameters
 
@@ -98,7 +98,7 @@ readonly [`LavalinkNode`](LavalinkNode.md)[]
 
 > **sendPacket**(`guildId`, `payload`): `Promise`\<`void`\>
 
-Defined in: [src/connectors/DiscordJSConnector.ts:46](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordJSConnector.ts#L46)
+Defined in: [src/connectors/DiscordJSConnector.ts:46](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordJSConnector.ts#L46)
 
 #### Parameters
 

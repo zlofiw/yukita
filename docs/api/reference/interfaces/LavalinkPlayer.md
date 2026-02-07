@@ -6,7 +6,7 @@
 
 # Interface: LavalinkPlayer
 
-Defined in: [src/lavalink/types.ts:330](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L330)
+Defined in: [src/lavalink/types.ts:330](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L330)
 
 Lavalink REST player model.
 
@@ -16,7 +16,7 @@ Lavalink REST player model.
 
 > **guildId**: `string`
 
-Defined in: [src/lavalink/types.ts:331](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L331)
+Defined in: [src/lavalink/types.ts:331](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L331)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:331](https://github.com/zlofiw/yukita/blob/17
 
 > **track**: [`LavalinkTrack`](LavalinkTrack.md) \| `null`
 
-Defined in: [src/lavalink/types.ts:332](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L332)
+Defined in: [src/lavalink/types.ts:332](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L332)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/types.ts:332](https://github.com/zlofiw/yukita/blob/17
 
 > **volume**: `number`
 
-Defined in: [src/lavalink/types.ts:333](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L333)
+Defined in: [src/lavalink/types.ts:333](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L333)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/lavalink/types.ts:333](https://github.com/zlofiw/yukita/blob/17
 
 > **paused**: `boolean`
 
-Defined in: [src/lavalink/types.ts:334](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L334)
+Defined in: [src/lavalink/types.ts:334](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L334)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/lavalink/types.ts:334](https://github.com/zlofiw/yukita/blob/17
 
 > **state**: [`LavalinkPlayerState`](LavalinkPlayerState.md)
 
-Defined in: [src/lavalink/types.ts:335](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L335)
+Defined in: [src/lavalink/types.ts:335](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L335)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/lavalink/types.ts:335](https://github.com/zlofiw/yukita/blob/17
 
 > **voice**: [`LavalinkVoiceState`](LavalinkVoiceState.md)
 
-Defined in: [src/lavalink/types.ts:336](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L336)
+Defined in: [src/lavalink/types.ts:336](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L336)
 
 ***
 
@@ -64,4 +64,4 @@ Defined in: [src/lavalink/types.ts:336](https://github.com/zlofiw/yukita/blob/17
 
 > **filters**: `Record`\<`string`, `unknown`\>
 
-Defined in: [src/lavalink/types.ts:337](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L337)
+Defined in: [src/lavalink/types.ts:337](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L337)

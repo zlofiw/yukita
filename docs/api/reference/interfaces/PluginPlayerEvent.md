@@ -6,7 +6,7 @@
 
 # Interface: PluginPlayerEvent
 
-Defined in: [src/plugins/types.ts:34](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L34)
+Defined in: [src/plugins/types.ts:34](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L34)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/plugins/types.ts:34](https://github.com/zlofiw/yukita/blob/174c
 
 > **type**: `"created"` \| `"destroyed"` \| `"state"`
 
-Defined in: [src/plugins/types.ts:35](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L35)
+Defined in: [src/plugins/types.ts:35](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L35)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/plugins/types.ts:35](https://github.com/zlofiw/yukita/blob/174c
 
 > **contextId**: `string`
 
-Defined in: [src/plugins/types.ts:36](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L36)
+Defined in: [src/plugins/types.ts:36](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L36)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [src/plugins/types.ts:36](https://github.com/zlofiw/yukita/blob/174c
 
 > **payload**: `unknown`
 
-Defined in: [src/plugins/types.ts:37](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L37)
+Defined in: [src/plugins/types.ts:37](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L37)

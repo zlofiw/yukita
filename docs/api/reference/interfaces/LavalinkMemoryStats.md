@@ -6,7 +6,7 @@
 
 # Interface: LavalinkMemoryStats
 
-Defined in: [src/lavalink/types.ts:125](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L125)
+Defined in: [src/lavalink/types.ts:125](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L125)
 
 Lavalink memory stats.
 
@@ -16,7 +16,7 @@ Lavalink memory stats.
 
 > **reservable**: `number`
 
-Defined in: [src/lavalink/types.ts:126](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L126)
+Defined in: [src/lavalink/types.ts:126](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L126)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:126](https://github.com/zlofiw/yukita/blob/17
 
 > **used**: `number`
 
-Defined in: [src/lavalink/types.ts:127](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L127)
+Defined in: [src/lavalink/types.ts:127](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L127)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/types.ts:127](https://github.com/zlofiw/yukita/blob/17
 
 > **free**: `number`
 
-Defined in: [src/lavalink/types.ts:128](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L128)
+Defined in: [src/lavalink/types.ts:128](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L128)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/lavalink/types.ts:128](https://github.com/zlofiw/yukita/blob/17
 
 > **allocated**: `number`
 
-Defined in: [src/lavalink/types.ts:129](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L129)
+Defined in: [src/lavalink/types.ts:129](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L129)

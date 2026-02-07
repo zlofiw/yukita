@@ -6,7 +6,7 @@
 
 # Interface: PluginLogger
 
-Defined in: [src/plugins/types.ts:6](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L6)
+Defined in: [src/plugins/types.ts:6](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L6)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/plugins/types.ts:6](https://github.com/zlofiw/yukita/blob/174c6
 
 > **debug**: (`message`, `meta?`) => `void`
 
-Defined in: [src/plugins/types.ts:7](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L7)
+Defined in: [src/plugins/types.ts:7](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L7)
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Defined in: [src/plugins/types.ts:7](https://github.com/zlofiw/yukita/blob/174c6
 
 > **info**: (`message`, `meta?`) => `void`
 
-Defined in: [src/plugins/types.ts:8](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L8)
+Defined in: [src/plugins/types.ts:8](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L8)
 
 #### Parameters
 
@@ -58,7 +58,7 @@ Defined in: [src/plugins/types.ts:8](https://github.com/zlofiw/yukita/blob/174c6
 
 > **warn**: (`message`, `meta?`) => `void`
 
-Defined in: [src/plugins/types.ts:9](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L9)
+Defined in: [src/plugins/types.ts:9](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L9)
 
 #### Parameters
 
@@ -80,7 +80,7 @@ Defined in: [src/plugins/types.ts:9](https://github.com/zlofiw/yukita/blob/174c6
 
 > **error**: (`message`, `meta?`) => `void`
 
-Defined in: [src/plugins/types.ts:10](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L10)
+Defined in: [src/plugins/types.ts:10](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L10)
 
 #### Parameters
 

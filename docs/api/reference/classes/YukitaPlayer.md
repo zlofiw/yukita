@@ -6,7 +6,7 @@
 
 # Class: YukitaPlayer
 
-Defined in: [src/lavalink/Player.ts:27](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L27)
+Defined in: [src/lavalink/Player.ts:27](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L27)
 
 Playback unit scoped to single `contextId`.
 
@@ -16,7 +16,7 @@ Playback unit scoped to single `contextId`.
 
 > **new YukitaPlayer**(`input`): `YukitaPlayer`
 
-Defined in: [src/lavalink/Player.ts:43](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L43)
+Defined in: [src/lavalink/Player.ts:43](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L43)
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Defined in: [src/lavalink/Player.ts:43](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **contextId**: `string`
 
-Defined in: [src/lavalink/Player.ts:28](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L28)
+Defined in: [src/lavalink/Player.ts:28](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L28)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/lavalink/Player.ts:28](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **guildId**: `string`
 
-Defined in: [src/lavalink/Player.ts:29](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L29)
+Defined in: [src/lavalink/Player.ts:29](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L29)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [src/lavalink/Player.ts:29](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **queue**: [`PlayerQueue`](PlayerQueue.md)
 
-Defined in: [src/lavalink/Player.ts:30](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L30)
+Defined in: [src/lavalink/Player.ts:30](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L30)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [src/lavalink/Player.ts:30](https://github.com/zlofiw/yukita/blob/17
 
 > `readonly` **voice**: [`PlayerVoiceState`](../interfaces/PlayerVoiceState.md)
 
-Defined in: [src/lavalink/Player.ts:31](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L31)
+Defined in: [src/lavalink/Player.ts:31](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L31)
 
 ## Accessors
 
@@ -90,7 +90,7 @@ Defined in: [src/lavalink/Player.ts:31](https://github.com/zlofiw/yukita/blob/17
 
 > **get** **currentNodeId**(): `string`
 
-Defined in: [src/lavalink/Player.ts:89](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L89)
+Defined in: [src/lavalink/Player.ts:89](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L89)
 
 Current node id of this player.
 
@@ -104,7 +104,7 @@ Current node id of this player.
 
 > **snapshot**(): [`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)
 
-Defined in: [src/lavalink/Player.ts:70](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L70)
+Defined in: [src/lavalink/Player.ts:70](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L70)
 
 Returns immutable snapshot of player state.
 
@@ -118,7 +118,7 @@ Returns immutable snapshot of player state.
 
 > **connect**(`channelId`, `options?`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:96](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L96)
+Defined in: [src/lavalink/Player.ts:96](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L96)
 
 Requests Discord voice join/move via connector (Opcode 4).
 
@@ -148,7 +148,7 @@ Requests Discord voice join/move via connector (Opcode 4).
 
 > **disconnect**(`options?`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:135](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L135)
+Defined in: [src/lavalink/Player.ts:135](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L135)
 
 Requests Discord voice leave via connector (Opcode 4).
 
@@ -174,7 +174,7 @@ Requests Discord voice leave via connector (Opcode 4).
 
 > **applyVoiceState**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:174](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L174)
+Defined in: [src/lavalink/Player.ts:174](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L174)
 
 Updates player voice state from connector.
 
@@ -204,7 +204,7 @@ Updates player voice state from connector.
 
 > **applyVoiceServer**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:200](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L200)
+Defined in: [src/lavalink/Player.ts:200](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L200)
 
 Updates player voice server payload from connector.
 
@@ -230,7 +230,7 @@ Updates player voice server payload from connector.
 
 > **addToQueue**(`track`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`number`\>\>
 
-Defined in: [src/lavalink/Player.ts:213](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L213)
+Defined in: [src/lavalink/Player.ts:213](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L213)
 
 Adds tracks to queue.
 
@@ -250,7 +250,7 @@ Adds tracks to queue.
 
 > **removeFromQueue**(`index`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`YukitaTrackModel`](../interfaces/YukitaTrackModel.md)\>\>
 
-Defined in: [src/lavalink/Player.ts:229](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L229)
+Defined in: [src/lavalink/Player.ts:229](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L229)
 
 Removes track from queue by index.
 
@@ -270,7 +270,7 @@ Removes track from queue by index.
 
 > **moveQueue**(`fromIndex`, `toIndex`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:245](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L245)
+Defined in: [src/lavalink/Player.ts:245](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L245)
 
 Moves queue item.
 
@@ -294,7 +294,7 @@ Moves queue item.
 
 > **clearQueue**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:261](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L261)
+Defined in: [src/lavalink/Player.ts:261](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L261)
 
 Clears queue.
 
@@ -308,7 +308,7 @@ Clears queue.
 
 > **shuffleQueue**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:274](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L274)
+Defined in: [src/lavalink/Player.ts:274](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L274)
 
 Shuffles queue.
 
@@ -322,7 +322,7 @@ Shuffles queue.
 
 > **setRepeatMode**(`mode`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:287](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L287)
+Defined in: [src/lavalink/Player.ts:287](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L287)
 
 Sets repeat mode.
 
@@ -342,7 +342,7 @@ Sets repeat mode.
 
 > **playTrack**(`track`, `options?`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:300](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L300)
+Defined in: [src/lavalink/Player.ts:300](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L300)
 
 Plays explicit track.
 
@@ -366,7 +366,7 @@ Plays explicit track.
 
 > **playNext**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`YukitaTrackModel`](../interfaces/YukitaTrackModel.md) \| `null`\>\>
 
-Defined in: [src/lavalink/Player.ts:360](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L360)
+Defined in: [src/lavalink/Player.ts:360](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L360)
 
 Plays next queue item according to repeat mode.
 
@@ -380,7 +380,7 @@ Plays next queue item according to repeat mode.
 
 > **pause**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:384](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L384)
+Defined in: [src/lavalink/Player.ts:384](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L384)
 
 Pauses playback.
 
@@ -394,7 +394,7 @@ Pauses playback.
 
 > **resume**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:401](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L401)
+Defined in: [src/lavalink/Player.ts:401](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L401)
 
 Resumes playback.
 
@@ -408,7 +408,7 @@ Resumes playback.
 
 > **stop**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:418](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L418)
+Defined in: [src/lavalink/Player.ts:418](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L418)
 
 Stops playback.
 
@@ -422,7 +422,7 @@ Stops playback.
 
 > **seek**(`positionMs`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:441](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L441)
+Defined in: [src/lavalink/Player.ts:441](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L441)
 
 Seeks current track.
 
@@ -442,7 +442,7 @@ Seeks current track.
 
 > **setVolume**(`volume`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:458](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L458)
+Defined in: [src/lavalink/Player.ts:458](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L458)
 
 Sets output volume.
 
@@ -462,7 +462,7 @@ Sets output volume.
 
 > **applyFilters**(`filters`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:475](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L475)
+Defined in: [src/lavalink/Player.ts:475](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L475)
 
 Applies filter payload.
 
@@ -482,7 +482,7 @@ Applies filter payload.
 
 > **clearFilters**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:492](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L492)
+Defined in: [src/lavalink/Player.ts:492](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L492)
 
 Clears active filters.
 
@@ -496,7 +496,7 @@ Clears active filters.
 
 > **onPlayerUpdate**(`payload`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlaybackTelemetry`](../interfaces/PlaybackTelemetry.md)\>\>
 
-Defined in: [src/lavalink/Player.ts:509](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L509)
+Defined in: [src/lavalink/Player.ts:509](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L509)
 
 Handles player telemetry from node events.
 
@@ -516,7 +516,7 @@ Handles player telemetry from node events.
 
 > **onPlayerEvent**(`payload`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:530](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L530)
+Defined in: [src/lavalink/Player.ts:530](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L530)
 
 Handles track-related lavalink events.
 
@@ -536,7 +536,7 @@ Handles track-related lavalink events.
 
 > **migrateToNode**(`targetNodeId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:590](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L590)
+Defined in: [src/lavalink/Player.ts:590](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L590)
 
 Moves player state to another node after failover.
 
@@ -556,7 +556,7 @@ Moves player state to another node after failover.
 
 > **resync**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:631](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L631)
+Defined in: [src/lavalink/Player.ts:631](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L631)
 
 Re-sends current voice/track state to the current node (used after resume=false reconnects).
 
@@ -570,7 +570,7 @@ Re-sends current voice/track state to the current node (used after resume=false 
 
 > **destroy**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/Player.ts:664](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/Player.ts#L664)
+Defined in: [src/lavalink/Player.ts:664](https://github.com/zlofiw/yukita/blob/main/src/lavalink/Player.ts#L664)
 
 Destroys player on remote node and releases resources.
 

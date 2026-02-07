@@ -8,10 +8,10 @@
   "readme": "none",
   "githubPages": false,
   "cleanOutputDir": true,
+  "gitRevision": "main",
   "excludeInternal": true,
   "excludePrivate": true,
   "excludeProtected": true,
   "hideGenerator": true,
   "sort": ["source-order"]
 }
-

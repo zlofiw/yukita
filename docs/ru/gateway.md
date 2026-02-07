@@ -1,16 +1,16 @@
 # WebSocket Gateway
 
-YukitaSan includes a WebSocket gateway (as a plugin) for dashboards and external clients.
+YukitaSan включает WebSocket gateway (как плагин) для дашбордов и внешних клиентов.
 
-## Browser Constraint
+## Ограничение браузера
 
-Browsers cannot set arbitrary headers during the WebSocket handshake (for example `Authorization`), so the gateway supports multiple auth transports:
+В браузере нельзя передавать произвольные заголовки во время WebSocket-handshake (например `Authorization`), поэтому gateway поддерживает несколько способов передачи auth:
 
-1. Query param token: `wss://.../yukitasan?token=...`
-2. Subprotocol token via `Sec-WebSocket-Protocol`
-3. First `auth` message after connect (challenge/response)
+1. Токен в query: `wss://.../yukitasan?token=...`
+2. Токен в subprotocol через `Sec-WebSocket-Protocol`
+3. Первое сообщение `auth` после подключения (challenge/response)
 
-## Plugin Setup
+## Подключение плагина
 
 ```ts
 import { createWebsocketGatewayPlugin } from 'yukitasan';
@@ -27,13 +27,21 @@ await client.use(
 );
 ```
 
-## Auth: Query Token
+## Роли
+
+Авторизация в gateway построена на ролях:
+
+- `web:read`: подписки/только чтение
+- `bot:control`: команды управления воспроизведением
+- `admin`: полный доступ
+
+## Auth: токен в query
 
 ```ts
 new WebSocket('wss://localhost:8080/yukitasan?token=YOUR_TOKEN');
 ```
 
-## Auth: Subprotocol
+## Auth: subprotocol
 
 ```ts
 new WebSocket('wss://localhost:8080/yukitasan', [
@@ -42,11 +50,11 @@ new WebSocket('wss://localhost:8080/yukitasan', [
 ]);
 ```
 
-## Auth: First Message
+## Auth: первое сообщение
 
-1. Connect without token
-2. Server sends `hello` with `challenge`
-3. Client replies with `auth`
+1. Подключиться без токена
+2. Сервер отправляет `hello` с `challenge`
+3. Клиент отвечает `auth`
 
 ```ts
 const ws = new WebSocket('wss://localhost:8080/yukitasan');
@@ -70,15 +78,43 @@ ws.onmessage = (event) => {
 };
 ```
 
-## Subscriptions
+## Подписки
 
-Send commands:
+Команды отправляются так:
 
 ```json
 { "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"nodes" } }
 { "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"players" } }
 { "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"events" } }
+{ "op":"cmd", "t":"subscribe", "id":"...", "ts": 0, "d": { "topic":"metrics" } }
 ```
 
-The server also supports `context:<id>` topics for per-guild/player streams.
+Также поддерживаются topics вида `context:<id>` для потоков per-guild/player.
 
+## Команды
+
+Встроенные типы команд:
+
+- `play`, `pause`, `resume`, `stop`, `seek`, `volume`
+- `queue.add`, `queue.remove`, `queue.move`, `queue.clear`, `queue.shuffle`
+- `filters.apply`, `filters.clear`
+
+Каждая команда отправляется как:
+
+```json
+{ "op":"cmd", "t":"pause", "id":"...", "ts": 0, "d": { "contextId": "123" } }
+```
+
+## Безопасность (редакция)
+
+Для сессий с ролью `web:read` gateway вырезает чувствительные данные:
+
+- секреты Discord voice удаляются из snapshots
+- `track.encoded` удаляется из events/snapshots, если у сессии нет `bot:control` (или `admin`)
+
+Если UI нужны операции, требующие `encoded`, аутентифицируйся с `bot:control`.
+
+## Кастомные topics и команды (плагины)
+
+Gateway можно расширять из плагинов (публиковать новые topics, регистрировать кастомные команды).
+См. `examples/plugin/index.ts`.

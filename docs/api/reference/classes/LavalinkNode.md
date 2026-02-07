@@ -6,7 +6,7 @@
 
 # Class: LavalinkNode
 
-Defined in: [src/lavalink/LavalinkNode.ts:33](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L33)
+Defined in: [src/lavalink/LavalinkNode.ts:33](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L33)
 
 Combined REST + WS lavalink node client.
 
@@ -16,7 +16,7 @@ Combined REST + WS lavalink node client.
 
 > **new LavalinkNode**(`config`): `LavalinkNode`
 
-Defined in: [src/lavalink/LavalinkNode.ts:46](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L46)
+Defined in: [src/lavalink/LavalinkNode.ts:46](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L46)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:46](https://github.com/zlofiw/yukita/b
 
 > `readonly` **id**: `string`
 
-Defined in: [src/lavalink/LavalinkNode.ts:34](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L34)
+Defined in: [src/lavalink/LavalinkNode.ts:34](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L34)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:34](https://github.com/zlofiw/yukita/b
 
 > `readonly` **config**: [`LavalinkNodeConfig`](../interfaces/LavalinkNodeConfig.md)
 
-Defined in: [src/lavalink/LavalinkNode.ts:35](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L35)
+Defined in: [src/lavalink/LavalinkNode.ts:35](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L35)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:35](https://github.com/zlofiw/yukita/b
 
 > `readonly` **rest**: [`LavalinkRestClient`](LavalinkRestClient.md)
 
-Defined in: [src/lavalink/LavalinkNode.ts:36](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L36)
+Defined in: [src/lavalink/LavalinkNode.ts:36](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L36)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:36](https://github.com/zlofiw/yukita/b
 
 > `readonly` **ws**: [`LavalinkWsClient`](LavalinkWsClient.md)
 
-Defined in: [src/lavalink/LavalinkNode.ts:37](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L37)
+Defined in: [src/lavalink/LavalinkNode.ts:37](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L37)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:37](https://github.com/zlofiw/yukita/b
 
 > `readonly` **events**: [`AsyncEventBus`](AsyncEventBus.md)\<[`LavalinkNodeEvents`](../interfaces/LavalinkNodeEvents.md)\>
 
-Defined in: [src/lavalink/LavalinkNode.ts:38](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L38)
+Defined in: [src/lavalink/LavalinkNode.ts:38](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L38)
 
 ***
 
@@ -74,7 +74,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:38](https://github.com/zlofiw/yukita/b
 
 > **state**: [`LavalinkNodeState`](../type-aliases/LavalinkNodeState.md) = `'idle'`
 
-Defined in: [src/lavalink/LavalinkNode.ts:39](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L39)
+Defined in: [src/lavalink/LavalinkNode.ts:39](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L39)
 
 ***
 
@@ -82,7 +82,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:39](https://github.com/zlofiw/yukita/b
 
 > **stats**: [`LavalinkNodeStats`](../interfaces/LavalinkNodeStats.md) \| `null` = `null`
 
-Defined in: [src/lavalink/LavalinkNode.ts:40](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L40)
+Defined in: [src/lavalink/LavalinkNode.ts:40](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L40)
 
 ***
 
@@ -90,7 +90,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:40](https://github.com/zlofiw/yukita/b
 
 > **latencyMs**: `number` \| `null` = `null`
 
-Defined in: [src/lavalink/LavalinkNode.ts:41](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L41)
+Defined in: [src/lavalink/LavalinkNode.ts:41](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L41)
 
 ## Accessors
 
@@ -100,7 +100,7 @@ Defined in: [src/lavalink/LavalinkNode.ts:41](https://github.com/zlofiw/yukita/b
 
 > **get** **sessionId**(): `string` \| `null`
 
-Defined in: [src/lavalink/LavalinkNode.ts:57](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L57)
+Defined in: [src/lavalink/LavalinkNode.ts:57](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L57)
 
 Last known session id from lavalink websocket.
 
@@ -116,7 +116,7 @@ Last known session id from lavalink websocket.
 
 > **get** **penalty**(): `number`
 
-Defined in: [src/lavalink/LavalinkNode.ts:64](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L64)
+Defined in: [src/lavalink/LavalinkNode.ts:64](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L64)
 
 Node penalty score for load-balancing strategies.
 
@@ -130,7 +130,7 @@ Node penalty score for load-balancing strategies.
 
 > **connect**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/LavalinkNode.ts:84](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L84)
+Defined in: [src/lavalink/LavalinkNode.ts:84](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L84)
 
 Opens node connection and waits for ready op.
 
@@ -144,7 +144,7 @@ Opens node connection and waits for ready op.
 
 > **disconnect**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/LavalinkNode.ts:141](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L141)
+Defined in: [src/lavalink/LavalinkNode.ts:141](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L141)
 
 Disconnects node.
 
@@ -158,7 +158,7 @@ Disconnects node.
 
 > **destroy**(): `Promise`\<`void`\>
 
-Defined in: [src/lavalink/LavalinkNode.ts:161](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkNode.ts#L161)
+Defined in: [src/lavalink/LavalinkNode.ts:161](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkNode.ts#L161)
 
 Destroys node and frees resources.
 

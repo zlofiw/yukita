@@ -6,7 +6,7 @@
 
 # Interface: LavalinkTrack
 
-Defined in: [src/lavalink/types.ts:68](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L68)
+Defined in: [src/lavalink/types.ts:68](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L68)
 
 Lavalink track model.
 
@@ -16,7 +16,7 @@ Lavalink track model.
 
 > **encoded**: `string`
 
-Defined in: [src/lavalink/types.ts:69](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L69)
+Defined in: [src/lavalink/types.ts:69](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L69)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:69](https://github.com/zlofiw/yukita/blob/174
 
 > **info**: [`LavalinkTrackInfo`](LavalinkTrackInfo.md)
 
-Defined in: [src/lavalink/types.ts:70](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L70)
+Defined in: [src/lavalink/types.ts:70](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L70)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/types.ts:70](https://github.com/zlofiw/yukita/blob/174
 
 > `optional` **pluginInfo**: `unknown`
 
-Defined in: [src/lavalink/types.ts:71](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L71)
+Defined in: [src/lavalink/types.ts:71](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L71)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/lavalink/types.ts:71](https://github.com/zlofiw/yukita/blob/174
 
 > `optional` **userData**: `unknown`
 
-Defined in: [src/lavalink/types.ts:72](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L72)
+Defined in: [src/lavalink/types.ts:72](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L72)

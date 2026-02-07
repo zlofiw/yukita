@@ -6,7 +6,7 @@
 
 # Interface: LavalinkTrackStartEvent
 
-Defined in: [src/lavalink/types.ts:189](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L189)
+Defined in: [src/lavalink/types.ts:189](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L189)
 
 Lavalink track started event payload.
 
@@ -16,7 +16,7 @@ Lavalink track started event payload.
 
 > **op**: `"event"`
 
-Defined in: [src/lavalink/types.ts:190](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L190)
+Defined in: [src/lavalink/types.ts:190](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L190)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:190](https://github.com/zlofiw/yukita/blob/17
 
 > **type**: `"TrackStartEvent"`
 
-Defined in: [src/lavalink/types.ts:191](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L191)
+Defined in: [src/lavalink/types.ts:191](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L191)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/types.ts:191](https://github.com/zlofiw/yukita/blob/17
 
 > **guildId**: `string`
 
-Defined in: [src/lavalink/types.ts:192](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L192)
+Defined in: [src/lavalink/types.ts:192](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L192)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/lavalink/types.ts:192](https://github.com/zlofiw/yukita/blob/17
 
 > **track**: [`LavalinkTrack`](LavalinkTrack.md)
 
-Defined in: [src/lavalink/types.ts:193](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L193)
+Defined in: [src/lavalink/types.ts:193](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L193)

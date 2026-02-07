@@ -6,7 +6,7 @@
 
 # Interface: LavalinkRestClientHooks
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:22](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L22)
+Defined in: [src/lavalink/LavalinkRestClient.ts:22](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L22)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:22](https://github.com/zlofiw/yu
 
 > `optional` **onRequest**: (`ctx`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:23](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L23)
+Defined in: [src/lavalink/LavalinkRestClient.ts:23](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L23)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:23](https://github.com/zlofiw/yu
 
 > `optional` **onResponse**: \<`T`\>(`ctx`, `res`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:24](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L24)
+Defined in: [src/lavalink/LavalinkRestClient.ts:24](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L24)
 
 #### Type Parameters
 
@@ -60,7 +60,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:24](https://github.com/zlofiw/yu
 
 > `optional` **onError**: (`ctx`, `error`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:25](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L25)
+Defined in: [src/lavalink/LavalinkRestClient.ts:25](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L25)
 
 #### Parameters
 

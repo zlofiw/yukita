@@ -6,7 +6,7 @@
 
 # Interface: PlayInput
 
-Defined in: [src/types.ts:177](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L177)
+Defined in: [src/types.ts:177](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L177)
 
 Commands accepted by `YukitaSan.play`.
 
@@ -16,7 +16,7 @@ Commands accepted by `YukitaSan.play`.
 
 > `optional` **query**: `string`
 
-Defined in: [src/types.ts:178](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L178)
+Defined in: [src/types.ts:178](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L178)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/types.ts:178](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > `optional` **track**: [`YukitaTrackModel`](YukitaTrackModel.md)
 
-Defined in: [src/types.ts:179](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L179)
+Defined in: [src/types.ts:179](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L179)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/types.ts:179](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > `optional` **metadata**: `Record`\<`string`, `unknown`\>
 
-Defined in: [src/types.ts:180](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L180)
+Defined in: [src/types.ts:180](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L180)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/types.ts:180](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > `optional` **sourceHints**: `string`[]
 
-Defined in: [src/types.ts:181](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L181)
+Defined in: [src/types.ts:181](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L181)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: [src/types.ts:181](https://github.com/zlofiw/yukita/blob/174c62f77ab
 
 > `optional` **preferredNodeId**: `string`
 
-Defined in: [src/types.ts:182](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/types.ts#L182)
+Defined in: [src/types.ts:182](https://github.com/zlofiw/yukita/blob/main/src/types.ts#L182)

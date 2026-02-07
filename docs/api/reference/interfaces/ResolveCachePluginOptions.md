@@ -6,7 +6,7 @@
 
 # Interface: ResolveCachePluginOptions
 
-Defined in: [src/plugins/resolve-cache.ts:14](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L14)
+Defined in: [src/plugins/resolve-cache.ts:14](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L14)
 
 Resolve cache plugin options.
 
@@ -16,7 +16,7 @@ Resolve cache plugin options.
 
 > `optional` **namespace**: `string`
 
-Defined in: [src/plugins/resolve-cache.ts:15](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L15)
+Defined in: [src/plugins/resolve-cache.ts:15](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L15)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/plugins/resolve-cache.ts:15](https://github.com/zlofiw/yukita/b
 
 > `optional` **ttlMs**: `number`
 
-Defined in: [src/plugins/resolve-cache.ts:16](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L16)
+Defined in: [src/plugins/resolve-cache.ts:16](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L16)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [src/plugins/resolve-cache.ts:16](https://github.com/zlofiw/yukita/b
 
 > `optional` **maxEntries**: `number`
 
-Defined in: [src/plugins/resolve-cache.ts:17](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/resolve-cache.ts#L17)
+Defined in: [src/plugins/resolve-cache.ts:17](https://github.com/zlofiw/yukita/blob/main/src/plugins/resolve-cache.ts#L17)

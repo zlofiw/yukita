@@ -6,7 +6,7 @@
 
 # Class: YukitaError
 
-Defined in: [src/shared/errors.ts:36](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/errors.ts#L36)
+Defined in: [src/shared/errors.ts:36](https://github.com/zlofiw/yukita/blob/main/src/shared/errors.ts#L36)
 
 Structured error object used across all packages.
 
@@ -20,7 +20,7 @@ Structured error object used across all packages.
 
 > **new YukitaError**(`input`): `YukitaError`
 
-Defined in: [src/shared/errors.ts:42](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/errors.ts#L42)
+Defined in: [src/shared/errors.ts:42](https://github.com/zlofiw/yukita/blob/main/src/shared/errors.ts#L42)
 
 #### Parameters
 
@@ -114,7 +114,7 @@ Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/li
 
 > `readonly` **code**: [`YukitaErrorCode`](../type-aliases/YukitaErrorCode.md)
 
-Defined in: [src/shared/errors.ts:37](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/errors.ts#L37)
+Defined in: [src/shared/errors.ts:37](https://github.com/zlofiw/yukita/blob/main/src/shared/errors.ts#L37)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [src/shared/errors.ts:37](https://github.com/zlofiw/yukita/blob/174c
 
 > `readonly` `optional` **meta**: `Record`\<`string`, `unknown`\>
 
-Defined in: [src/shared/errors.ts:38](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/errors.ts#L38)
+Defined in: [src/shared/errors.ts:38](https://github.com/zlofiw/yukita/blob/main/src/shared/errors.ts#L38)
 
 ***
 
@@ -130,7 +130,7 @@ Defined in: [src/shared/errors.ts:38](https://github.com/zlofiw/yukita/blob/174c
 
 > `readonly` `optional` **cause**: `unknown`
 
-Defined in: [src/shared/errors.ts:40](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/shared/errors.ts#L40)
+Defined in: [src/shared/errors.ts:40](https://github.com/zlofiw/yukita/blob/main/src/shared/errors.ts#L40)
 
 #### Overrides
 

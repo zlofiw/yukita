@@ -6,7 +6,7 @@
 
 # Class: YukitaSan
 
-Defined in: [src/YukitaSan.ts:51](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L51)
+Defined in: [src/YukitaSan.ts:51](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L51)
 
 Main orchestration class for nodes, players, resolve and plugins.
 
@@ -16,7 +16,7 @@ Main orchestration class for nodes, players, resolve and plugins.
 
 > **new YukitaSan**(`options`): `YukitaSan`
 
-Defined in: [src/YukitaSan.ts:65](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L65)
+Defined in: [src/YukitaSan.ts:65](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L65)
 
 #### Parameters
 
@@ -34,7 +34,7 @@ Defined in: [src/YukitaSan.ts:65](https://github.com/zlofiw/yukita/blob/174c62f7
 
 > `readonly` **nodePool**: [`NodePool`](NodePool.md)
 
-Defined in: [src/YukitaSan.ts:52](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L52)
+Defined in: [src/YukitaSan.ts:52](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L52)
 
 ***
 
@@ -42,7 +42,7 @@ Defined in: [src/YukitaSan.ts:52](https://github.com/zlofiw/yukita/blob/174c62f7
 
 > `readonly` **connector**: [`Connector`](../interfaces/Connector.md) \| `null`
 
-Defined in: [src/YukitaSan.ts:53](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L53)
+Defined in: [src/YukitaSan.ts:53](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L53)
 
 ***
 
@@ -50,7 +50,7 @@ Defined in: [src/YukitaSan.ts:53](https://github.com/zlofiw/yukita/blob/174c62f7
 
 > `readonly` **events**: [`AsyncEventBus`](AsyncEventBus.md)\<[`YukitaSanEvents`](../interfaces/YukitaSanEvents.md)\>
 
-Defined in: [src/YukitaSan.ts:54](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L54)
+Defined in: [src/YukitaSan.ts:54](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L54)
 
 ***
 
@@ -58,7 +58,7 @@ Defined in: [src/YukitaSan.ts:54](https://github.com/zlofiw/yukita/blob/174c62f7
 
 > `readonly` **extensions**: [`ExtensionsMap`](../type-aliases/ExtensionsMap.md)
 
-Defined in: [src/YukitaSan.ts:55](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L55)
+Defined in: [src/YukitaSan.ts:55](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L55)
 
 ***
 
@@ -66,7 +66,7 @@ Defined in: [src/YukitaSan.ts:55](https://github.com/zlofiw/yukita/blob/174c62f7
 
 > `readonly` **plugins**: `Map`\<`string`, [`YukitaPlugin`](../interfaces/YukitaPlugin.md)\>
 
-Defined in: [src/YukitaSan.ts:56](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L56)
+Defined in: [src/YukitaSan.ts:56](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L56)
 
 ## Methods
 
@@ -74,7 +74,7 @@ Defined in: [src/YukitaSan.ts:56](https://github.com/zlofiw/yukita/blob/174c62f7
 
 > **start**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:80](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L80)
+Defined in: [src/YukitaSan.ts:80](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L80)
 
 Starts node connections.
 
@@ -88,7 +88,7 @@ Starts node connections.
 
 > **shutdown**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:107](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L107)
+Defined in: [src/YukitaSan.ts:107](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L107)
 
 Gracefully stops client and all nodes.
 
@@ -102,7 +102,7 @@ Gracefully stops client and all nodes.
 
 > **on**\<`TKey`\>(`event`, `listener`): () => `void`
 
-Defined in: [src/YukitaSan.ts:155](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L155)
+Defined in: [src/YukitaSan.ts:155](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L155)
 
 Registers listener and returns unsubscribe function.
 
@@ -136,7 +136,7 @@ Registers listener and returns unsubscribe function.
 
 > **use**(`plugin`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:165](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L165)
+Defined in: [src/YukitaSan.ts:165](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L165)
 
 Installs plugin with compatibility check.
 
@@ -156,7 +156,7 @@ Installs plugin with compatibility check.
 
 > **getExtension**\<`TApi`\>(`namespace`): [`Result`](../type-aliases/Result.md)\<`TApi`\>
 
-Defined in: [src/YukitaSan.ts:231](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L231)
+Defined in: [src/YukitaSan.ts:231](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L231)
 
 Retrieves plugin extension namespace.
 
@@ -182,7 +182,7 @@ Retrieves plugin extension namespace.
 
 > **createPlayer**(`contextId`, `input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`YukitaPlayer`](YukitaPlayer.md)\>\>
 
-Defined in: [src/YukitaSan.ts:248](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L248)
+Defined in: [src/YukitaSan.ts:248](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L248)
 
 Creates player for context.
 
@@ -206,7 +206,7 @@ Creates player for context.
 
 > **getPlayer**(`contextId`): [`Result`](../type-aliases/Result.md)\<[`YukitaPlayer`](YukitaPlayer.md)\>
 
-Defined in: [src/YukitaSan.ts:286](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L286)
+Defined in: [src/YukitaSan.ts:286](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L286)
 
 Gets player by context id.
 
@@ -226,7 +226,7 @@ Gets player by context id.
 
 > **listPlayers**(): [`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)[]
 
-Defined in: [src/YukitaSan.ts:303](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L303)
+Defined in: [src/YukitaSan.ts:303](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L303)
 
 Returns snapshots of all known players.
 
@@ -240,7 +240,7 @@ Returns snapshots of all known players.
 
 > **destroyPlayer**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:310](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L310)
+Defined in: [src/YukitaSan.ts:310](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L310)
 
 Destroys player by context id.
 
@@ -260,7 +260,7 @@ Destroys player by context id.
 
 > **resolve**(`contextId`, `query`, `options?`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`ResolveOutput`](../interfaces/ResolveOutput.md)\>\>
 
-Defined in: [src/YukitaSan.ts:335](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L335)
+Defined in: [src/YukitaSan.ts:335](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L335)
 
 Resolves query/url through selected node.
 
@@ -288,7 +288,7 @@ Resolves query/url through selected node.
 
 > **play**(`contextId`, `input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:453](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L453)
+Defined in: [src/YukitaSan.ts:453](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L453)
 
 Resolves and starts playback or uses provided track.
 
@@ -312,7 +312,7 @@ Resolves and starts playback or uses provided track.
 
 > **queueAdd**(`contextId`, `input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:536](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L536)
+Defined in: [src/YukitaSan.ts:536](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L536)
 
 Adds query/track to queue.
 
@@ -336,7 +336,7 @@ Adds query/track to queue.
 
 > **pause**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:595](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L595)
+Defined in: [src/YukitaSan.ts:595](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L595)
 
 Pauses current player.
 
@@ -356,7 +356,7 @@ Pauses current player.
 
 > **resume**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:602](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L602)
+Defined in: [src/YukitaSan.ts:602](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L602)
 
 Resumes current player.
 
@@ -376,7 +376,7 @@ Resumes current player.
 
 > **stop**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:609](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L609)
+Defined in: [src/YukitaSan.ts:609](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L609)
 
 Stops current player.
 
@@ -396,7 +396,7 @@ Stops current player.
 
 > **seek**(`contextId`, `positionMs`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:616](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L616)
+Defined in: [src/YukitaSan.ts:616](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L616)
 
 Seeks current track.
 
@@ -420,7 +420,7 @@ Seeks current track.
 
 > **setVolume**(`contextId`, `volume`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:623](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L623)
+Defined in: [src/YukitaSan.ts:623](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L623)
 
 Sets player volume.
 
@@ -444,7 +444,7 @@ Sets player volume.
 
 > **applyFilters**(`contextId`, `filters`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:630](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L630)
+Defined in: [src/YukitaSan.ts:630](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L630)
 
 Applies player filters.
 
@@ -468,7 +468,7 @@ Applies player filters.
 
 > **clearFilters**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:637](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L637)
+Defined in: [src/YukitaSan.ts:637](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L637)
 
 Clears player filters.
 
@@ -488,7 +488,7 @@ Clears player filters.
 
 > **queueRemove**(`contextId`, `index`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:644](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L644)
+Defined in: [src/YukitaSan.ts:644](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L644)
 
 Removes queue track.
 
@@ -512,7 +512,7 @@ Removes queue track.
 
 > **queueMove**(`contextId`, `fromIndex`, `toIndex`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:651](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L651)
+Defined in: [src/YukitaSan.ts:651](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L651)
 
 Moves queue track.
 
@@ -540,7 +540,7 @@ Moves queue track.
 
 > **queueClear**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:658](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L658)
+Defined in: [src/YukitaSan.ts:658](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L658)
 
 Clears queue.
 
@@ -560,7 +560,7 @@ Clears queue.
 
 > **queueShuffle**(`contextId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`PlayerSnapshot`](../interfaces/PlayerSnapshot.md)\>\>
 
-Defined in: [src/YukitaSan.ts:665](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L665)
+Defined in: [src/YukitaSan.ts:665](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L665)
 
 Shuffles queue.
 
@@ -580,7 +580,7 @@ Shuffles queue.
 
 > **applyVoiceStateUpdate**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:672](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L672)
+Defined in: [src/YukitaSan.ts:672](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L672)
 
 Applies voice state updates from external connector.
 
@@ -600,7 +600,7 @@ Applies voice state updates from external connector.
 
 > **applyVoiceServerUpdate**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:691](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L691)
+Defined in: [src/YukitaSan.ts:691](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L691)
 
 Applies voice server updates from external connector.
 
@@ -620,7 +620,7 @@ Applies voice server updates from external connector.
 
 > **emitOrdered**\<`TKey`\>(`contextId`, `event`, `payload`): `Promise`\<`void`\>
 
-Defined in: [src/YukitaSan.ts:708](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L708)
+Defined in: [src/YukitaSan.ts:708](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L708)
 
 Emits event ordered per context id.
 
@@ -654,7 +654,7 @@ Emits event ordered per context id.
 
 > **runBeforePlay**(`payload`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`BeforePlayPayload`](../interfaces/BeforePlayPayload.md)\>\>
 
-Defined in: [src/YukitaSan.ts:733](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L733)
+Defined in: [src/YukitaSan.ts:733](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L733)
 
 Runs before-play plugin hooks.
 
@@ -674,7 +674,7 @@ Runs before-play plugin hooks.
 
 > **runAfterPlay**(`payload`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/YukitaSan.ts:753](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/YukitaSan.ts#L753)
+Defined in: [src/YukitaSan.ts:753](https://github.com/zlofiw/yukita/blob/main/src/YukitaSan.ts#L753)
 
 Runs after-play plugin hooks.
 

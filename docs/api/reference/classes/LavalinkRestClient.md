@@ -6,7 +6,7 @@
 
 # Class: LavalinkRestClient
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:34](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L34)
+Defined in: [src/lavalink/LavalinkRestClient.ts:34](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L34)
 
 REST client for Lavalink v4.
 
@@ -19,7 +19,7 @@ REST client for Lavalink v4.
 
 > **new LavalinkRestClient**(`config`): `LavalinkRestClient`
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:47](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L47)
+Defined in: [src/lavalink/LavalinkRestClient.ts:47](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L47)
 
 #### Parameters
 
@@ -37,7 +37,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:47](https://github.com/zlofiw/yu
 
 > **setHooks**(`hooks`): `void`
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:61](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L61)
+Defined in: [src/lavalink/LavalinkRestClient.ts:61](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L61)
 
 #### Parameters
 
@@ -55,7 +55,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:61](https://github.com/zlofiw/yu
 
 > **getVersion**(): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<`string`\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:68](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L68)
+Defined in: [src/lavalink/LavalinkRestClient.ts:68](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L68)
 
 `/version` (unprefixed) - returns Lavalink version string.
 
@@ -69,7 +69,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:68](https://github.com/zlofiw/yu
 
 > **getInfo**(): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`JsonValue`](../type-aliases/JsonValue.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:81](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L81)
+Defined in: [src/lavalink/LavalinkRestClient.ts:81](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L81)
 
 `/v4/info`
 
@@ -83,7 +83,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:81](https://github.com/zlofiw/yu
 
 > **getStats**(): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkNodeStats`](../interfaces/LavalinkNodeStats.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:92](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L92)
+Defined in: [src/lavalink/LavalinkRestClient.ts:92](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L92)
 
 `/v4/stats`
 
@@ -97,7 +97,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:92](https://github.com/zlofiw/yu
 
 > **resolve**(`identifier`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkLoadResult`](../type-aliases/LavalinkLoadResult.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:103](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L103)
+Defined in: [src/lavalink/LavalinkRestClient.ts:103](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L103)
 
 `/v4/loadtracks`
 
@@ -117,7 +117,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:103](https://github.com/zlofiw/y
 
 > **decodeTrack**(`encodedTrack`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkTrack`](../interfaces/LavalinkTrack.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:114](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L114)
+Defined in: [src/lavalink/LavalinkRestClient.ts:114](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L114)
 
 `/v4/decodetrack`
 
@@ -137,7 +137,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:114](https://github.com/zlofiw/y
 
 > **decodeTracks**(`encodedTracks`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkTrack`](../interfaces/LavalinkTrack.md)[]\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:125](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L125)
+Defined in: [src/lavalink/LavalinkRestClient.ts:125](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L125)
 
 `/v4/decodetracks`
 
@@ -157,7 +157,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:125](https://github.com/zlofiw/y
 
 > **updatePlayer**(`input`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkPlayer`](../interfaces/LavalinkPlayer.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:140](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L140)
+Defined in: [src/lavalink/LavalinkRestClient.ts:140](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L140)
 
 `/v4/sessions/{sessionId}/players/{guildId}`
 
@@ -191,7 +191,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:140](https://github.com/zlofiw/y
 
 > **getPlayers**(`sessionId`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkPlayer`](../interfaces/LavalinkPlayer.md)[]\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:162](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L162)
+Defined in: [src/lavalink/LavalinkRestClient.ts:162](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L162)
 
 `/v4/sessions/{sessionId}/players`
 
@@ -211,7 +211,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:162](https://github.com/zlofiw/y
 
 > **getPlayer**(`input`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkPlayer`](../interfaces/LavalinkPlayer.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:173](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L173)
+Defined in: [src/lavalink/LavalinkRestClient.ts:173](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L173)
 
 `/v4/sessions/{sessionId}/players/{guildId}`
 
@@ -237,7 +237,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:173](https://github.com/zlofiw/y
 
 > **destroyPlayer**(`input`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<`void`\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:184](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L184)
+Defined in: [src/lavalink/LavalinkRestClient.ts:184](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L184)
 
 `/v4/sessions/{sessionId}/players/{guildId}`
 
@@ -263,7 +263,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:184](https://github.com/zlofiw/y
 
 > **updateSession**(`input`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkSession`](../interfaces/LavalinkSession.md)\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:196](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L196)
+Defined in: [src/lavalink/LavalinkRestClient.ts:196](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L196)
 
 `/v4/sessions/{sessionId}`
 
@@ -293,7 +293,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:196](https://github.com/zlofiw/y
 
 > **getRoutePlannerStatus**(): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<[`LavalinkRoutePlannerStatus`](../interfaces/LavalinkRoutePlannerStatus.md) \| `null`\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:219](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L219)
+Defined in: [src/lavalink/LavalinkRestClient.ts:219](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L219)
 
 `/v4/routeplanner/status`
 
@@ -307,7 +307,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:219](https://github.com/zlofiw/y
 
 > **unmarkFailedAddress**(`address`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<`void`\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:234](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L234)
+Defined in: [src/lavalink/LavalinkRestClient.ts:234](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L234)
 
 `/v4/routeplanner/free/address`
 
@@ -327,7 +327,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:234](https://github.com/zlofiw/y
 
 > **unmarkAllFailedAddresses**(): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<`void`\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:250](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L250)
+Defined in: [src/lavalink/LavalinkRestClient.ts:250](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L250)
 
 `/v4/routeplanner/free/all`
 
@@ -341,7 +341,7 @@ Defined in: [src/lavalink/LavalinkRestClient.ts:250](https://github.com/zlofiw/y
 
 > **raw**\<`T`\>(`input`): `Promise`\<[`LavalinkResponse`](../type-aliases/LavalinkResponse.md)\<`T`\>\>
 
-Defined in: [src/lavalink/LavalinkRestClient.ts:262](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkRestClient.ts#L262)
+Defined in: [src/lavalink/LavalinkRestClient.ts:262](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkRestClient.ts#L262)
 
 Low-level request helper for full REST coverage (escape hatch).
 

@@ -6,7 +6,7 @@
 
 # Interface: DefinePluginContext
 
-Defined in: [src/plugins/definePlugin.ts:23](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/definePlugin.ts#L23)
+Defined in: [src/plugins/definePlugin.ts:23](https://github.com/zlofiw/yukita/blob/main/src/plugins/definePlugin.ts#L23)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/plugins/definePlugin.ts:23](https://github.com/zlofiw/yukita/bl
 
 > **coreVersion**: `string`
 
-Defined in: [src/plugins/definePlugin.ts:24](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/definePlugin.ts#L24)
+Defined in: [src/plugins/definePlugin.ts:24](https://github.com/zlofiw/yukita/blob/main/src/plugins/definePlugin.ts#L24)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/plugins/definePlugin.ts:24](https://github.com/zlofiw/yukita/bl
 
 > **logger**: [`PluginLogger`](PluginLogger.md)
 
-Defined in: [src/plugins/definePlugin.ts:25](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/definePlugin.ts#L25)
+Defined in: [src/plugins/definePlugin.ts:25](https://github.com/zlofiw/yukita/blob/main/src/plugins/definePlugin.ts#L25)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/plugins/definePlugin.ts:25](https://github.com/zlofiw/yukita/bl
 
 > **client**: [`YukitaSan`](../classes/YukitaSan.md)
 
-Defined in: [src/plugins/definePlugin.ts:26](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/definePlugin.ts#L26)
+Defined in: [src/plugins/definePlugin.ts:26](https://github.com/zlofiw/yukita/blob/main/src/plugins/definePlugin.ts#L26)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [src/plugins/definePlugin.ts:26](https://github.com/zlofiw/yukita/bl
 
 > **extendApi**: \<`TApi`\>(`namespace`, `api`) => [`Result`](../type-aliases/Result.md)\<`void`\>
 
-Defined in: [src/plugins/definePlugin.ts:28](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/definePlugin.ts#L28)
+Defined in: [src/plugins/definePlugin.ts:28](https://github.com/zlofiw/yukita/blob/main/src/plugins/definePlugin.ts#L28)
 
 #### Type Parameters
 
@@ -66,7 +66,7 @@ Defined in: [src/plugins/definePlugin.ts:28](https://github.com/zlofiw/yukita/bl
 
 > **hooks**: `object`
 
-Defined in: [src/plugins/definePlugin.ts:30](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/definePlugin.ts#L30)
+Defined in: [src/plugins/definePlugin.ts:30](https://github.com/zlofiw/yukita/blob/main/src/plugins/definePlugin.ts#L30)
 
 #### onInit()
 

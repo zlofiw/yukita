@@ -6,7 +6,7 @@
 
 # Interface: BeforeResolvePayload
 
-Defined in: [src/plugins/types.ts:13](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L13)
+Defined in: [src/plugins/types.ts:13](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L13)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/plugins/types.ts:13](https://github.com/zlofiw/yukita/blob/174c
 
 > **contextId**: `string`
 
-Defined in: [src/plugins/types.ts:14](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L14)
+Defined in: [src/plugins/types.ts:14](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L14)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/plugins/types.ts:14](https://github.com/zlofiw/yukita/blob/174c
 
 > **query**: `string`
 
-Defined in: [src/plugins/types.ts:15](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L15)
+Defined in: [src/plugins/types.ts:15](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L15)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [src/plugins/types.ts:15](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **preferredNodeId**: `string`
 
-Defined in: [src/plugins/types.ts:16](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L16)
+Defined in: [src/plugins/types.ts:16](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L16)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [src/plugins/types.ts:16](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **sourceHints**: `string`[]
 
-Defined in: [src/plugins/types.ts:17](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L17)
+Defined in: [src/plugins/types.ts:17](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L17)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [src/plugins/types.ts:17](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **metadata**: `Record`\<`string`, `unknown`\>
 
-Defined in: [src/plugins/types.ts:18](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L18)
+Defined in: [src/plugins/types.ts:18](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L18)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: [src/plugins/types.ts:18](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **shortCircuitResult**: [`YukitaResolveModel`](../type-aliases/YukitaResolveModel.md)
 
-Defined in: [src/plugins/types.ts:19](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L19)
+Defined in: [src/plugins/types.ts:19](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L19)

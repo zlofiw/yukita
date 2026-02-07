@@ -6,7 +6,7 @@
 
 # Interface: LavalinkFrameStats
 
-Defined in: [src/lavalink/types.ts:135](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L135)
+Defined in: [src/lavalink/types.ts:135](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L135)
 
 Lavalink frame stats.
 
@@ -16,7 +16,7 @@ Lavalink frame stats.
 
 > **sent**: `number`
 
-Defined in: [src/lavalink/types.ts:136](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L136)
+Defined in: [src/lavalink/types.ts:136](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L136)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:136](https://github.com/zlofiw/yukita/blob/17
 
 > **deficit**: `number`
 
-Defined in: [src/lavalink/types.ts:137](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L137)
+Defined in: [src/lavalink/types.ts:137](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L137)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: [src/lavalink/types.ts:137](https://github.com/zlofiw/yukita/blob/17
 
 > **nulled**: `number`
 
-Defined in: [src/lavalink/types.ts:138](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L138)
+Defined in: [src/lavalink/types.ts:138](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L138)

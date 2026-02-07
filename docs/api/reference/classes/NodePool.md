@@ -6,7 +6,7 @@
 
 # Class: NodePool
 
-Defined in: [src/lavalink/NodePool.ts:22](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L22)
+Defined in: [src/lavalink/NodePool.ts:22](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L22)
 
 Multi-node manager with selection and failover helpers.
 
@@ -16,7 +16,7 @@ Multi-node manager with selection and failover helpers.
 
 > **new NodePool**(`input`): `NodePool`
 
-Defined in: [src/lavalink/NodePool.ts:28](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L28)
+Defined in: [src/lavalink/NodePool.ts:28](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L28)
 
 #### Parameters
 
@@ -40,7 +40,7 @@ Defined in: [src/lavalink/NodePool.ts:28](https://github.com/zlofiw/yukita/blob/
 
 > `readonly` **events**: [`AsyncEventBus`](AsyncEventBus.md)\<[`NodePoolEvents`](../interfaces/NodePoolEvents.md)\>
 
-Defined in: [src/lavalink/NodePool.ts:23](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L23)
+Defined in: [src/lavalink/NodePool.ts:23](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L23)
 
 ## Methods
 
@@ -48,7 +48,7 @@ Defined in: [src/lavalink/NodePool.ts:23](https://github.com/zlofiw/yukita/blob/
 
 > **setStrategy**(`strategy`): `void`
 
-Defined in: [src/lavalink/NodePool.ts:40](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L40)
+Defined in: [src/lavalink/NodePool.ts:40](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L40)
 
 Sets default selection strategy.
 
@@ -68,7 +68,7 @@ Sets default selection strategy.
 
 > **listNodes**(): [`LavalinkNode`](LavalinkNode.md)[]
 
-Defined in: [src/lavalink/NodePool.ts:47](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L47)
+Defined in: [src/lavalink/NodePool.ts:47](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L47)
 
 Returns shallow copy of all nodes.
 
@@ -82,7 +82,7 @@ Returns shallow copy of all nodes.
 
 > **getNode**(`nodeId`): [`LavalinkNode`](LavalinkNode.md) \| `undefined`
 
-Defined in: [src/lavalink/NodePool.ts:54](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L54)
+Defined in: [src/lavalink/NodePool.ts:54](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L54)
 
 Gets node by id.
 
@@ -102,7 +102,7 @@ Gets node by id.
 
 > **connectAll**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/NodePool.ts:61](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L61)
+Defined in: [src/lavalink/NodePool.ts:61](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L61)
 
 Connects all configured nodes.
 
@@ -116,7 +116,7 @@ Connects all configured nodes.
 
 > **addNode**(`config`): `Promise`\<[`Result`](../type-aliases/Result.md)\<[`LavalinkNode`](LavalinkNode.md)\>\>
 
-Defined in: [src/lavalink/NodePool.ts:81](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L81)
+Defined in: [src/lavalink/NodePool.ts:81](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L81)
 
 Adds node at runtime.
 
@@ -136,7 +136,7 @@ Adds node at runtime.
 
 > **removeNode**(`nodeId`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/lavalink/NodePool.ts:105](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L105)
+Defined in: [src/lavalink/NodePool.ts:105](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L105)
 
 Removes and destroys node.
 
@@ -156,7 +156,7 @@ Removes and destroys node.
 
 > **select**(`input?`): [`Result`](../type-aliases/Result.md)\<[`LavalinkNode`](LavalinkNode.md)\>
 
-Defined in: [src/lavalink/NodePool.ts:125](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L125)
+Defined in: [src/lavalink/NodePool.ts:125](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L125)
 
 Selects best available node.
 
@@ -176,7 +176,7 @@ Selects best available node.
 
 > **destroy**(): `Promise`\<`void`\>
 
-Defined in: [src/lavalink/NodePool.ts:217](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/NodePool.ts#L217)
+Defined in: [src/lavalink/NodePool.ts:217](https://github.com/zlofiw/yukita/blob/main/src/lavalink/NodePool.ts#L217)
 
 Destroys all nodes and clears listeners.
 

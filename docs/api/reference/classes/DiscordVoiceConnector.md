@@ -6,7 +6,7 @@
 
 # Class: DiscordVoiceConnector
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:50](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L50)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:50](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L50)
 
 Discord connector that feeds voice events into `yukitasan`.
 
@@ -16,7 +16,7 @@ Discord connector that feeds voice events into `yukitasan`.
 
 > **new DiscordVoiceConnector**(`client`, `sender`, `options`): `DiscordVoiceConnector`
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:55](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L55)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:55](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L55)
 
 #### Parameters
 
@@ -42,7 +42,7 @@ Defined in: [src/connectors/DiscordVoiceConnector.ts:55](https://github.com/zlof
 
 > **handleVoiceStateUpdate**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:64](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L64)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:64](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L64)
 
 Handles Discord VOICE_STATE_UPDATE.
 
@@ -72,7 +72,7 @@ Handles Discord VOICE_STATE_UPDATE.
 
 > **handleVoiceServerUpdate**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:78](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L78)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:78](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L78)
 
 Handles Discord VOICE_SERVER_UPDATE.
 
@@ -98,7 +98,7 @@ Handles Discord VOICE_SERVER_UPDATE.
 
 > **joinVoice**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:88](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L88)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:88](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L88)
 
 Sends join command to Discord gateway.
 
@@ -136,7 +136,7 @@ Sends join command to Discord gateway.
 
 > **moveVoice**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:107](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L107)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:107](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L107)
 
 Sends move command to Discord gateway.
 
@@ -174,7 +174,7 @@ Sends move command to Discord gateway.
 
 > **leaveVoice**(`input`): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:126](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L126)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:126](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L126)
 
 Sends leave command to Discord gateway.
 

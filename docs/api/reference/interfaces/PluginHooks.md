@@ -6,7 +6,7 @@
 
 # Interface: PluginHooks
 
-Defined in: [src/plugins/types.ts:52](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L52)
+Defined in: [src/plugins/types.ts:52](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L52)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/plugins/types.ts:52](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onInit**: () => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:53](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L53)
+Defined in: [src/plugins/types.ts:53](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L53)
 
 #### Returns
 
@@ -26,7 +26,7 @@ Defined in: [src/plugins/types.ts:53](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onShutdown**: () => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:54](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L54)
+Defined in: [src/plugins/types.ts:54](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L54)
 
 #### Returns
 
@@ -38,7 +38,7 @@ Defined in: [src/plugins/types.ts:54](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onNodeEvent**: (`payload`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:56](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L56)
+Defined in: [src/plugins/types.ts:56](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L56)
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Defined in: [src/plugins/types.ts:56](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onPlayerEvent**: (`payload`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:57](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L57)
+Defined in: [src/plugins/types.ts:57](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L57)
 
 #### Parameters
 
@@ -74,7 +74,7 @@ Defined in: [src/plugins/types.ts:57](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onTrackEvent**: (`payload`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:58](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L58)
+Defined in: [src/plugins/types.ts:58](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L58)
 
 #### Parameters
 
@@ -92,7 +92,7 @@ Defined in: [src/plugins/types.ts:58](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onQueueEvent**: (`payload`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:59](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L59)
+Defined in: [src/plugins/types.ts:59](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L59)
 
 #### Parameters
 
@@ -110,7 +110,7 @@ Defined in: [src/plugins/types.ts:59](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **beforeResolve**: (`payload`) => `void` \| [`BeforeResolvePayload`](BeforeResolvePayload.md) \| [`Result`](../type-aliases/Result.md)\<[`BeforeResolvePayload`](BeforeResolvePayload.md)\> \| `Promise`\<void \| BeforeResolvePayload \| Result\<BeforeResolvePayload\>\>
 
-Defined in: [src/plugins/types.ts:62](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L62)
+Defined in: [src/plugins/types.ts:62](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L62)
 
 #### Parameters
 
@@ -128,7 +128,7 @@ Defined in: [src/plugins/types.ts:62](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **afterResolve**: (`request`, `result`) => `void` \| [`YukitaResolveModel`](../type-aliases/YukitaResolveModel.md) \| [`Result`](../type-aliases/Result.md)\<[`YukitaResolveModel`](../type-aliases/YukitaResolveModel.md)\> \| `Promise`\<void \| YukitaResolveModel \| Result\<YukitaResolveModel\>\>
 
-Defined in: [src/plugins/types.ts:65](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L65)
+Defined in: [src/plugins/types.ts:65](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L65)
 
 #### Parameters
 
@@ -150,7 +150,7 @@ Defined in: [src/plugins/types.ts:65](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **beforePlay**: (`payload`) => `void` \| [`BeforePlayPayload`](BeforePlayPayload.md) \| [`Result`](../type-aliases/Result.md)\<[`BeforePlayPayload`](BeforePlayPayload.md)\> \| `Promise`\<void \| BeforePlayPayload \| Result\<BeforePlayPayload\>\>
 
-Defined in: [src/plugins/types.ts:69](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L69)
+Defined in: [src/plugins/types.ts:69](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L69)
 
 #### Parameters
 
@@ -168,7 +168,7 @@ Defined in: [src/plugins/types.ts:69](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **afterPlay**: (`payload`) => `void` \| [`Result`](../type-aliases/Result.md)\<`void`\> \| `Promise`\<void \| Result\<void\>\>
 
-Defined in: [src/plugins/types.ts:72](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L72)
+Defined in: [src/plugins/types.ts:72](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L72)
 
 #### Parameters
 
@@ -186,7 +186,7 @@ Defined in: [src/plugins/types.ts:72](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onRestRequest**: (`ctx`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:75](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L75)
+Defined in: [src/plugins/types.ts:75](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L75)
 
 #### Parameters
 
@@ -204,7 +204,7 @@ Defined in: [src/plugins/types.ts:75](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onRestResponse**: \<`T`\>(`ctx`, `res`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:76](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L76)
+Defined in: [src/plugins/types.ts:76](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L76)
 
 #### Type Parameters
 
@@ -232,7 +232,7 @@ Defined in: [src/plugins/types.ts:76](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **onRestError**: (`ctx`, `error`) => `void` \| `Promise`\<`void`\>
 
-Defined in: [src/plugins/types.ts:77](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L77)
+Defined in: [src/plugins/types.ts:77](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L77)
 
 #### Parameters
 

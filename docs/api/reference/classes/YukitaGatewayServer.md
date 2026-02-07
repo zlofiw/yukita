@@ -6,7 +6,7 @@
 
 # Class: YukitaGatewayServer
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:51](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L51)
+Defined in: [src/gateway/YukitaGatewayServer.ts:51](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L51)
 
 WebSocket gateway for subscriptions and remote commands.
 
@@ -16,7 +16,7 @@ WebSocket gateway for subscriptions and remote commands.
 
 > **new YukitaGatewayServer**(`client`, `options`): `YukitaGatewayServer`
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:61](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L61)
+Defined in: [src/gateway/YukitaGatewayServer.ts:61](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L61)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: [src/gateway/YukitaGatewayServer.ts:61](https://github.com/zlofiw/yu
 
 > **registerCommand**(`name`, `registration`): () => `void`
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:74](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L74)
+Defined in: [src/gateway/YukitaGatewayServer.ts:74](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L74)
 
 Registers a custom gateway command handler (plugin extension point).
 
@@ -66,7 +66,7 @@ Registers a custom gateway command handler (plugin extension point).
 
 > **addOutboundTransform**(`transform`): () => `void`
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:95](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L95)
+Defined in: [src/gateway/YukitaGatewayServer.ts:95](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L95)
 
 Adds an outbound frame transform hook.
 Return disposer to remove.
@@ -91,7 +91,7 @@ Return disposer to remove.
 
 > **publish**(`topics`, `type`, `payload`): `void`
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:108](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L108)
+Defined in: [src/gateway/YukitaGatewayServer.ts:108](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L108)
 
 Publishes an event frame to a topic (or topics).
 
@@ -119,7 +119,7 @@ Publishes an event frame to a topic (or topics).
 
 > **start**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:132](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L132)
+Defined in: [src/gateway/YukitaGatewayServer.ts:132](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L132)
 
 Starts websocket gateway.
 
@@ -133,7 +133,7 @@ Starts websocket gateway.
 
 > **stop**(): `Promise`\<[`Result`](../type-aliases/Result.md)\<`void`\>\>
 
-Defined in: [src/gateway/YukitaGatewayServer.ts:169](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/YukitaGatewayServer.ts#L169)
+Defined in: [src/gateway/YukitaGatewayServer.ts:169](https://github.com/zlofiw/yukita/blob/main/src/gateway/YukitaGatewayServer.ts#L169)
 
 Stops websocket gateway.
 

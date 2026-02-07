@@ -6,7 +6,7 @@
 
 # Interface: LavalinkWsEvents
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:18](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L18)
+Defined in: [src/lavalink/LavalinkWsClient.ts:18](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L18)
 
 WS events emitted by lavalink websocket client.
 
@@ -16,7 +16,7 @@ WS events emitted by lavalink websocket client.
 
 > **connected**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:19](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L19)
+Defined in: [src/lavalink/LavalinkWsClient.ts:19](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L19)
 
 #### nodeId
 
@@ -28,7 +28,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:19](https://github.com/zlofiw/yuki
 
 > **disconnected**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:20](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L20)
+Defined in: [src/lavalink/LavalinkWsClient.ts:20](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L20)
 
 #### nodeId
 
@@ -48,7 +48,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:20](https://github.com/zlofiw/yuki
 
 > **error**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:21](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L21)
+Defined in: [src/lavalink/LavalinkWsClient.ts:21](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L21)
 
 #### nodeId
 
@@ -64,7 +64,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:21](https://github.com/zlofiw/yuki
 
 > **ready**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:22](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L22)
+Defined in: [src/lavalink/LavalinkWsClient.ts:22](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L22)
 
 #### nodeId
 
@@ -80,7 +80,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:22](https://github.com/zlofiw/yuki
 
 > **stats**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:23](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L23)
+Defined in: [src/lavalink/LavalinkWsClient.ts:23](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L23)
 
 #### nodeId
 
@@ -96,7 +96,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:23](https://github.com/zlofiw/yuki
 
 > **playerUpdate**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:24](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L24)
+Defined in: [src/lavalink/LavalinkWsClient.ts:24](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L24)
 
 #### nodeId
 
@@ -112,7 +112,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:24](https://github.com/zlofiw/yuki
 
 > **playerEvent**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:25](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L25)
+Defined in: [src/lavalink/LavalinkWsClient.ts:25](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L25)
 
 #### nodeId
 
@@ -128,7 +128,7 @@ Defined in: [src/lavalink/LavalinkWsClient.ts:25](https://github.com/zlofiw/yuki
 
 > **raw**: `object`
 
-Defined in: [src/lavalink/LavalinkWsClient.ts:26](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/LavalinkWsClient.ts#L26)
+Defined in: [src/lavalink/LavalinkWsClient.ts:26](https://github.com/zlofiw/yukita/blob/main/src/lavalink/LavalinkWsClient.ts#L26)
 
 #### nodeId
 

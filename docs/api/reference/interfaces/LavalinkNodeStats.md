@@ -6,7 +6,7 @@
 
 # Interface: LavalinkNodeStats
 
-Defined in: [src/lavalink/types.ts:153](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L153)
+Defined in: [src/lavalink/types.ts:153](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L153)
 
 Lavalink node stats payload.
 
@@ -16,7 +16,7 @@ Lavalink node stats payload.
 
 > **op**: `"stats"`
 
-Defined in: [src/lavalink/types.ts:154](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L154)
+Defined in: [src/lavalink/types.ts:154](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L154)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:154](https://github.com/zlofiw/yukita/blob/17
 
 > **players**: `number`
 
-Defined in: [src/lavalink/types.ts:155](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L155)
+Defined in: [src/lavalink/types.ts:155](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L155)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/types.ts:155](https://github.com/zlofiw/yukita/blob/17
 
 > **playingPlayers**: `number`
 
-Defined in: [src/lavalink/types.ts:156](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L156)
+Defined in: [src/lavalink/types.ts:156](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L156)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/lavalink/types.ts:156](https://github.com/zlofiw/yukita/blob/17
 
 > **memory**: [`LavalinkMemoryStats`](LavalinkMemoryStats.md)
 
-Defined in: [src/lavalink/types.ts:157](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L157)
+Defined in: [src/lavalink/types.ts:157](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L157)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/lavalink/types.ts:157](https://github.com/zlofiw/yukita/blob/17
 
 > **frameStats**: [`LavalinkFrameStats`](LavalinkFrameStats.md) \| `null`
 
-Defined in: [src/lavalink/types.ts:158](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L158)
+Defined in: [src/lavalink/types.ts:158](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L158)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/lavalink/types.ts:158](https://github.com/zlofiw/yukita/blob/17
 
 > **cpu**: [`LavalinkCpuStats`](LavalinkCpuStats.md)
 
-Defined in: [src/lavalink/types.ts:159](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L159)
+Defined in: [src/lavalink/types.ts:159](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L159)
 
 ***
 
@@ -64,4 +64,4 @@ Defined in: [src/lavalink/types.ts:159](https://github.com/zlofiw/yukita/blob/17
 
 > **uptime**: `number`
 
-Defined in: [src/lavalink/types.ts:160](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L160)
+Defined in: [src/lavalink/types.ts:160](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L160)

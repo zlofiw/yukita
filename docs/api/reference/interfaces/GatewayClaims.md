@@ -6,7 +6,7 @@
 
 # Interface: GatewayClaims
 
-Defined in: [src/gateway/types.ts:49](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L49)
+Defined in: [src/gateway/types.ts:49](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L49)
 
 Auth token claims.
 
@@ -16,7 +16,7 @@ Auth token claims.
 
 > **sub**: `string`
 
-Defined in: [src/gateway/types.ts:50](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L50)
+Defined in: [src/gateway/types.ts:50](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L50)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/gateway/types.ts:50](https://github.com/zlofiw/yukita/blob/174c
 
 > **roles**: [`GatewayRole`](../type-aliases/GatewayRole.md)[]
 
-Defined in: [src/gateway/types.ts:51](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L51)
+Defined in: [src/gateway/types.ts:51](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L51)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/gateway/types.ts:51](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **exp**: `number`
 
-Defined in: [src/gateway/types.ts:52](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L52)
+Defined in: [src/gateway/types.ts:52](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L52)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/gateway/types.ts:52](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **iat**: `number`
 
-Defined in: [src/gateway/types.ts:53](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L53)
+Defined in: [src/gateway/types.ts:53](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L53)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/gateway/types.ts:53](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **iss**: `string`
 
-Defined in: [src/gateway/types.ts:54](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L54)
+Defined in: [src/gateway/types.ts:54](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L54)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [src/gateway/types.ts:54](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **aud**: `string`
 
-Defined in: [src/gateway/types.ts:55](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L55)
+Defined in: [src/gateway/types.ts:55](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L55)

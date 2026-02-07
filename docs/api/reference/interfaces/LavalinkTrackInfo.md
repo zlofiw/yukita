@@ -6,7 +6,7 @@
 
 # Interface: LavalinkTrackInfo
 
-Defined in: [src/lavalink/types.ts:51](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L51)
+Defined in: [src/lavalink/types.ts:51](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L51)
 
 Lavalink track info from REST responses.
 
@@ -16,7 +16,7 @@ Lavalink track info from REST responses.
 
 > **identifier**: `string`
 
-Defined in: [src/lavalink/types.ts:52](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L52)
+Defined in: [src/lavalink/types.ts:52](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L52)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:52](https://github.com/zlofiw/yukita/blob/174
 
 > **isSeekable**: `boolean`
 
-Defined in: [src/lavalink/types.ts:53](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L53)
+Defined in: [src/lavalink/types.ts:53](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L53)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/lavalink/types.ts:53](https://github.com/zlofiw/yukita/blob/174
 
 > **author**: `string`
 
-Defined in: [src/lavalink/types.ts:54](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L54)
+Defined in: [src/lavalink/types.ts:54](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L54)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: [src/lavalink/types.ts:54](https://github.com/zlofiw/yukita/blob/174
 
 > **length**: `number`
 
-Defined in: [src/lavalink/types.ts:55](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L55)
+Defined in: [src/lavalink/types.ts:55](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L55)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/lavalink/types.ts:55](https://github.com/zlofiw/yukita/blob/174
 
 > **isStream**: `boolean`
 
-Defined in: [src/lavalink/types.ts:56](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L56)
+Defined in: [src/lavalink/types.ts:56](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L56)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/lavalink/types.ts:56](https://github.com/zlofiw/yukita/blob/174
 
 > **position**: `number`
 
-Defined in: [src/lavalink/types.ts:57](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L57)
+Defined in: [src/lavalink/types.ts:57](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L57)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/lavalink/types.ts:57](https://github.com/zlofiw/yukita/blob/174
 
 > **title**: `string`
 
-Defined in: [src/lavalink/types.ts:58](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L58)
+Defined in: [src/lavalink/types.ts:58](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L58)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [src/lavalink/types.ts:58](https://github.com/zlofiw/yukita/blob/174
 
 > `optional` **uri**: `string`
 
-Defined in: [src/lavalink/types.ts:59](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L59)
+Defined in: [src/lavalink/types.ts:59](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L59)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [src/lavalink/types.ts:59](https://github.com/zlofiw/yukita/blob/174
 
 > `optional` **artworkUrl**: `string`
 
-Defined in: [src/lavalink/types.ts:60](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L60)
+Defined in: [src/lavalink/types.ts:60](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L60)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [src/lavalink/types.ts:60](https://github.com/zlofiw/yukita/blob/174
 
 > `optional` **isrc**: `string`
 
-Defined in: [src/lavalink/types.ts:61](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L61)
+Defined in: [src/lavalink/types.ts:61](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L61)
 
 ***
 
@@ -96,4 +96,4 @@ Defined in: [src/lavalink/types.ts:61](https://github.com/zlofiw/yukita/blob/174
 
 > **sourceName**: `string`
 
-Defined in: [src/lavalink/types.ts:62](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L62)
+Defined in: [src/lavalink/types.ts:62](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L62)

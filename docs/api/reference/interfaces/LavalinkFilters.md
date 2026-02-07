@@ -6,7 +6,7 @@
 
 # Interface: LavalinkFilters
 
-Defined in: [src/lavalink/types.ts:276](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L276)
+Defined in: [src/lavalink/types.ts:276](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L276)
 
 Supported lavalink filter payload.
 
@@ -16,7 +16,7 @@ Supported lavalink filter payload.
 
 > `optional` **volume**: `number`
 
-Defined in: [src/lavalink/types.ts:277](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L277)
+Defined in: [src/lavalink/types.ts:277](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L277)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/lavalink/types.ts:277](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **equalizer**: `object`[]
 
-Defined in: [src/lavalink/types.ts:278](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L278)
+Defined in: [src/lavalink/types.ts:278](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L278)
 
 #### band
 
@@ -40,7 +40,7 @@ Defined in: [src/lavalink/types.ts:278](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **karaoke**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:279](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L279)
+Defined in: [src/lavalink/types.ts:279](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L279)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [src/lavalink/types.ts:279](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **timescale**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:280](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L280)
+Defined in: [src/lavalink/types.ts:280](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L280)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: [src/lavalink/types.ts:280](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **tremolo**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:281](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L281)
+Defined in: [src/lavalink/types.ts:281](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L281)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: [src/lavalink/types.ts:281](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **vibrato**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:282](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L282)
+Defined in: [src/lavalink/types.ts:282](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L282)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: [src/lavalink/types.ts:282](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **rotation**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:283](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L283)
+Defined in: [src/lavalink/types.ts:283](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L283)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: [src/lavalink/types.ts:283](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **distortion**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:284](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L284)
+Defined in: [src/lavalink/types.ts:284](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L284)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: [src/lavalink/types.ts:284](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **channelMix**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:285](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L285)
+Defined in: [src/lavalink/types.ts:285](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L285)
 
 ***
 
@@ -96,4 +96,4 @@ Defined in: [src/lavalink/types.ts:285](https://github.com/zlofiw/yukita/blob/17
 
 > `optional` **lowPass**: `Record`\<`string`, `number` \| `undefined`\> \| `null`
 
-Defined in: [src/lavalink/types.ts:286](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/lavalink/types.ts#L286)
+Defined in: [src/lavalink/types.ts:286](https://github.com/zlofiw/yukita/blob/main/src/lavalink/types.ts#L286)

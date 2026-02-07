@@ -6,7 +6,7 @@
 
 # Class: DiscordVoiceMapper
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:14](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L14)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:14](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L14)
 
 Stateless mapper for Discord dispatch to core voice update shape.
 
@@ -26,7 +26,7 @@ Stateless mapper for Discord dispatch to core voice update shape.
 
 > `static` **mapState**(`input`): `object`
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:18](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L18)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:18](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L18)
 
 Maps voice state event to core payload.
 
@@ -84,7 +84,7 @@ Maps voice state event to core payload.
 
 > `static` **mapServer**(`input`): `object`
 
-Defined in: [src/connectors/DiscordVoiceConnector.ts:37](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/connectors/DiscordVoiceConnector.ts#L37)
+Defined in: [src/connectors/DiscordVoiceConnector.ts:37](https://github.com/zlofiw/yukita/blob/main/src/connectors/DiscordVoiceConnector.ts#L37)
 
 Maps voice server event to core payload.
 

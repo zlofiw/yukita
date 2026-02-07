@@ -6,7 +6,7 @@
 
 # Interface: GatewayAuthOptions
 
-Defined in: [src/gateway/types.ts:61](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L61)
+Defined in: [src/gateway/types.ts:61](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L61)
 
 Gateway auth config.
 
@@ -16,7 +16,7 @@ Gateway auth config.
 
 > **mode**: [`GatewayAuthMode`](../type-aliases/GatewayAuthMode.md)
 
-Defined in: [src/gateway/types.ts:62](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L62)
+Defined in: [src/gateway/types.ts:62](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L62)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: [src/gateway/types.ts:62](https://github.com/zlofiw/yukita/blob/174c
 
 > **secret**: `string`
 
-Defined in: [src/gateway/types.ts:63](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L63)
+Defined in: [src/gateway/types.ts:63](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L63)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: [src/gateway/types.ts:63](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **issuer**: `string`
 
-Defined in: [src/gateway/types.ts:64](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L64)
+Defined in: [src/gateway/types.ts:64](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L64)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: [src/gateway/types.ts:64](https://github.com/zlofiw/yukita/blob/174c
 
 > `optional` **audience**: `string`
 
-Defined in: [src/gateway/types.ts:65](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/gateway/types.ts#L65)
+Defined in: [src/gateway/types.ts:65](https://github.com/zlofiw/yukita/blob/main/src/gateway/types.ts#L65)

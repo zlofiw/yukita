@@ -6,7 +6,7 @@
 
 # Interface: PluginQueueEvent
 
-Defined in: [src/plugins/types.ts:46](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L46)
+Defined in: [src/plugins/types.ts:46](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L46)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [src/plugins/types.ts:46](https://github.com/zlofiw/yukita/blob/174c
 
 > **type**: `"updated"`
 
-Defined in: [src/plugins/types.ts:47](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L47)
+Defined in: [src/plugins/types.ts:47](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L47)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [src/plugins/types.ts:47](https://github.com/zlofiw/yukita/blob/174c
 
 > **contextId**: `string`
 
-Defined in: [src/plugins/types.ts:48](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L48)
+Defined in: [src/plugins/types.ts:48](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L48)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [src/plugins/types.ts:48](https://github.com/zlofiw/yukita/blob/174c
 
 > **payload**: `unknown`
 
-Defined in: [src/plugins/types.ts:49](https://github.com/zlofiw/yukita/blob/174c62f77ab5cf009b285f72ee20570c556fbd94/src/plugins/types.ts#L49)
+Defined in: [src/plugins/types.ts:49](https://github.com/zlofiw/yukita/blob/main/src/plugins/types.ts#L49)
