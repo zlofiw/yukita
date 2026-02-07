@@ -1,36 +1,66 @@
 {
-  "name": "yukita",
-  "version": "1.0.0",
-  "private": true,
+  "name": "yukitasan",
+  "version": "0.1.0",
+  "license": "MIT",
   "packageManager": "pnpm@10.28.2",
-  "description": "YukiTa audio platform monorepo: core, protocol, gateway, connectors and plugins.",
+  "description": "Discord-library agnostic Lavalink v4 client library for Node.js.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "pnpm docs:build && pnpm -r build",
-    "build:packages": "pnpm -r --filter \"@yukita/*\" --filter \"!@yukita/docs\" build",
-    "typecheck": "pnpm -r typecheck",
-    "lint": "pnpm -r lint",
-    "test": "pnpm -r test",
-    "test:unit": "pnpm -r test:unit",
-    "test:integration": "pnpm --filter @yukita/core test:integration",
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "node scripts/run-integration.mjs",
     "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
     "ci": "pnpm check",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "version:all": "node scripts/set-version.mjs",
-    "publish:dry-run": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" --filter \"!@yukita/docs\" publish --access public --dry-run --no-git-checks",
-    "publish:npm": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" --filter \"!@yukita/docs\" publish --access public --no-git-checks",
-    "publish:dry-run:all": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --dry-run --no-git-checks",
-    "publish:npm:all": "pnpm build:packages && pnpm -r --filter \"@yukita/*\" publish --access public --no-git-checks",
-    "publish:dry-run:docs": "pnpm --filter @yukita/docs build && pnpm --filter @yukita/docs publish --access public --dry-run --no-git-checks",
-    "publish:npm:docs": "pnpm --filter @yukita/docs build && pnpm --filter @yukita/docs publish --access public --no-git-checks"
+    "version:set": "node scripts/set-version.mjs",
+    "publish:dry-run": "pnpm build && pnpm publish --access public --dry-run --no-git-checks",
+    "publish:npm": "pnpm build && pnpm publish --access public --no-git-checks"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "semver": "^7.6.3",
+    "ws": "^8.18.0"
+  },
+  "peerDependencies": {
+    "discord.js": "^14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "discord.js": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.13.5",
+    "@types/semver": "^7.7.1",
     "@types/ws": "^8.5.14",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
+    "discord.js": "^14.17.3",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "tsup": "^8.3.5",

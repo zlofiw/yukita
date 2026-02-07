@@ -1,38 +1,20 @@
-# YukiTa
+# yukitasan
 
-TypeScript-first Lavalink toolkit for Node.js.
+TypeScript-first Lavalink v4 client library for Node.js (Discord-library agnostic via Shoukaku-style connectors).
 
-## Packages
-
-- `@yukita/core` - node pool, resolver, player manager, queue and typed events.
-- `@yukita/protocol` - Lavalink REST/WS clients, payload mapping, backoff.
-- `@yukita/plugin-kit` - plugin contracts, Result primitives, shared errors.
-- `@yukita/gateway` - WebSocket command/event gateway with auth + roles.
-- `@yukita/connector-discord` - Discord voice-state/server adapter.
-- `@yukita/plugins-metrics` - reference metrics plugin.
-- `@yukita/plugins-resolve-cache` - reference resolve cache plugin.
-- `@yukita/docs` - packaged static documentation bundle (`docs/.vitepress/dist`).
-
-## Install (Monorepo)
+## Install
 
 ```bash
-pnpm install
+pnpm add yukitasan
+# or: npm i yukitasan
 ```
 
-## Build
-
-```bash
-pnpm build
-```
-
-## Quick Start
+## Quick Start (Core)
 
 ```ts
-import { YukitaClient } from '@yukita/core';
-import { MetricsPlugin } from '@yukita/plugins-metrics';
-import { ResolveCachePlugin } from '@yukita/plugins-resolve-cache';
+import { YukitaSan } from 'yukitasan';
 
-const client = new YukitaClient({
+const client = new YukitaSan({
   nodes: [
     {
       id: 'main',
@@ -46,146 +28,87 @@ const client = new YukitaClient({
 });
 
 const started = await client.start();
-if (!started.ok) {
-  throw started.error;
-}
-
-const metrics = await client.use(new MetricsPlugin());
-if (!metrics.ok) {
-  throw metrics.error;
-}
-
-const cache = await client.use(new ResolveCachePlugin());
-if (!cache.ok) {
-  throw cache.error;
-}
+if (!started.ok) throw started.error;
 
 const created = await client.createPlayer('guild:1', {
   guildId: 'guild-1',
   shardId: 0
 });
-if (!created.ok) {
-  throw created.error;
-}
+if (!created.ok) throw created.error;
 
-const played = await client.play('guild:1', {
-  query: 'ytsearch:deadmau5 strobe',
-  sourceHints: ['youtube']
-});
-if (!played.ok) {
-  throw played.error;
-}
+const resolved = await client.resolve('guild:1', 'ytsearch:daft punk around the world');
+if (!resolved.ok) throw resolved.error;
 ```
 
-## Node Config
+## Discord.js Connector (OP 4)
 
 ```ts
-{
-  id: 'main',
-  host: '127.0.0.1',
-  port: 2333,
-  secure: false,
-  password: 'youshallnotpass',
-  userId: '123456789012345678',
-  requestTimeoutMs: 10000,
-  readyTimeoutMs: 12000,
-  healthCheckIntervalMs: 15000,
-  resumeSession: true,
-  resumeTimeoutMs: 60000
-}
-```
+import { Client, GatewayIntentBits } from 'discord.js';
+import { DiscordJSConnector, YukitaSan } from 'yukitasan';
 
-## Gateway Example
-
-```ts
-import { YukitaGatewayServer } from '@yukita/gateway';
-
-const gateway = new YukitaGatewayServer(client, {
-  port: 8080,
-  path: '/yukita',
-  auth: {
-    mode: 'hmac',
-    secret: process.env.GATEWAY_SECRET ?? 'change-me'
-  },
-  allowedOrigins: ['https://example.com'],
-  rateLimit: {
-    maxCommands: 60,
-    windowMs: 30000
-  }
+const discord = new Client({
+  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates]
 });
 
-await gateway.start();
-```
-
-## Plugin Example
-
-```ts
-import {
-  ok,
-  type PluginInitContext,
-  type Result,
-  type YukitaPlugin
-} from '@yukita/plugin-kit';
-
-class HelloPlugin implements YukitaPlugin {
-  public readonly name = 'hello-plugin';
-  public readonly version = '1.0.0';
-  public readonly compatibleRange = '^1.0.0';
-
-  public async init(ctx: PluginInitContext): Promise<void | Result<void>> {
-    ctx.registerHooks({
-      onTrackEvent: (event) => {
-        if (event.type === 'started') {
-          ctx.logger.info('Track started', { contextId: event.contextId });
-        }
-      }
-    });
-
-    const extension = ctx.extendApi('hello', {
-      ping: () => 'pong'
-    });
-    if (!extension.ok) {
-      return extension;
+const yukita = new YukitaSan({
+  connector: new DiscordJSConnector(discord),
+  nodes: [
+    {
+      id: 'main',
+      host: '127.0.0.1',
+      port: 2333,
+      password: 'youshallnotpass',
+      userId: '123456789012345678'
     }
-
-    return ok(undefined);
-  }
-}
+  ]
+});
 ```
 
-## Docs
+## WebSocket Gateway Plugin
 
-- Local dev: `pnpm docs:dev`
-- Production build: `pnpm docs:build`
-- Main pages:
-  - `/quick-start`
-  - `/guides/plugin-development`
-  - `/reference/architecture`
-  - `/reference/events`
-  - `/reference/error-codes`
-  - `/reference/gateway-protocol`
-  - `/reference/plugins`
+```ts
+import { createWebsocketGatewayPlugin, YukitaSan } from 'yukitasan';
 
-## Commands
+const client = new YukitaSan({
+  nodes: [
+    {
+      id: 'main',
+      host: '127.0.0.1',
+      port: 2333,
+      password: 'youshallnotpass',
+      userId: '123456789012345678'
+    }
+  ]
+});
 
-- `pnpm lint`
-- `pnpm typecheck`
-- `pnpm test`
-- `pnpm build`
-- `pnpm check`
-- `pnpm docs:dev`
-- `pnpm docs:build`
-- `pnpm publish:dry-run`
-- `pnpm publish:npm`
+await client.use(
+  createWebsocketGatewayPlugin({
+    port: 8080,
+    path: '/yukitasan',
+    auth: {
+      mode: 'hmac',
+      secret: process.env.GATEWAY_SECRET ?? 'change-me'
+    }
+  })
+);
+```
 
-## Local Release
+## Development
 
-- Version sync helper: `pnpm version:all <x.y.z>`
-- Full validation: `pnpm check`
-- npm dry-run: `pnpm publish:dry-run`
-- npm publish: `pnpm publish:npm`
-- Release guide: `docs/guides/release.md`
+```bash
+pnpm install
+pnpm typecheck
+pnpm test:unit
+pnpm build
+```
+
+Integration tests require a running Lavalink v4 (see `docker/lavalink-compose.yml`):
+
+```bash
+pnpm test:integration
+```
 
 ## License
 
 MIT
+

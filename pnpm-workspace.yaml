@@ -1,4 +1,0 @@
-packages:
-  - packages/*
-  - packages/connectors/*
-  - packages/plugins/*

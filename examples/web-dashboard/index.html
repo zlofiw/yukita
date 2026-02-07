@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YukitaSan Dashboard</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: rgba(255, 255, 255, 0.06);
+        --text: #e7e9ee;
+        --muted: rgba(231, 233, 238, 0.7);
+        --accent: #7dd3fc;
+        --bad: #fb7185;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background:
+          radial-gradient(1200px 600px at 10% 10%, rgba(125, 211, 252, 0.25), transparent 60%),
+          radial-gradient(900px 500px at 90% 30%, rgba(251, 113, 133, 0.18), transparent 55%),
+          var(--bg);
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 28px 18px 48px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      @media (min-width: 800px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 16px;
+        backdrop-filter: blur(12px);
+      }
+
+      .row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      label {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      input {
+        width: min(520px, 100%);
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.25);
+        color: var(--text);
+        outline: none;
+      }
+
+      button {
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(125, 211, 252, 0.15);
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: rgba(125, 211, 252, 0.22);
+      }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-size: 12px;
+        color: rgba(231, 233, 238, 0.9);
+      }
+
+      .status {
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .status.bad {
+        color: var(--bad);
+      }
+
+      .pill {
+        display: inline-flex;
+        gap: 6px;
+        align-items: center;
+        padding: 3px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.2);
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--bad);
+      }
+
+      .dot.ok {
+        background: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>YukitaSan Dashboard</h1>
+      <p>Browser client connects to the gateway without custom headers. Use a token via query/subprotocol or auth message.</p>
+
+      <div class="card">
+        <div class="row">
+          <div style="flex: 1; min-width: 220px">
+            <label for="url">Gateway URL</label>
+            <input id="url" value="ws://localhost:8080/yukitasan?token=YOUR_TOKEN" />
+          </div>
+          <button id="connect">Connect</button>
+          <span id="conn" class="status">disconnected</span>
+          <span class="pill"><span id="dot" class="dot"></span><span id="authed">unauth</span></span>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3 style="margin: 0 0 10px">Nodes</h3>
+          <pre id="nodes">{}</pre>
+        </div>
+        <div class="card">
+          <h3 style="margin: 0 0 10px">Players</h3>
+          <pre id="players">{}</pre>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 14px">
+        <h3 style="margin: 0 0 10px">Events</h3>
+        <pre id="events"></pre>
+      </div>
+    </div>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const state = {
+        ws: null,
+        authed: false
+      };
+
+      function cmd(t, d) {
+        state.ws?.send(JSON.stringify({ op: 'cmd', t, id: crypto.randomUUID(), ts: Date.now(), d }));
+      }
+
+      $('connect').onclick = () => {
+        const url = $('url').value.trim();
+        if (!url) return;
+
+        if (state.ws) {
+          state.ws.close(1000, 'reconnect');
+          state.ws = null;
+        }
+
+        const ws = new WebSocket(url);
+        state.ws = ws;
+
+        ws.onopen = () => {
+          $('conn').textContent = 'connected';
+          $('conn').className = 'status';
+          // subscribe once authenticated
+        };
+
+        ws.onclose = (e) => {
+          $('conn').textContent = `closed (${e.code})`;
+          $('conn').className = 'status bad';
+          state.authed = false;
+          $('authed').textContent = 'unauth';
+          $('dot').className = 'dot';
+        };
+
+        ws.onmessage = (e) => {
+          const frame = JSON.parse(e.data);
+
+          if (frame.op === 'hello') {
+            // If you connected without token, reply here:
+            // ws.send(JSON.stringify({ op:'auth', t:'auth', id: crypto.randomUUID(), ts: Date.now(), d: { token: 'YOUR_TOKEN', challenge: frame.d.challenge }}))
+            return;
+          }
+
+          if (frame.op === 'ack' && frame.t === 'auth') {
+            state.authed = true;
+            $('authed').textContent = 'authed';
+            $('dot').className = 'dot ok';
+            cmd('subscribe', { topic: 'nodes' });
+            cmd('subscribe', { topic: 'players' });
+            cmd('subscribe', { topic: 'events' });
+            return;
+          }
+
+          if (frame.op === 'event') {
+            if (frame.t === 'snapshot.nodes') $('nodes').textContent = JSON.stringify(frame.d, null, 2);
+            if (frame.t === 'snapshot.players') $('players').textContent = JSON.stringify(frame.d, null, 2);
+
+            $('events').textContent = JSON.stringify(frame, null, 2) + '\n\n' + $('events').textContent;
+          }
+        };
+      };
+    </script>
+  </body>
+</html>
+
