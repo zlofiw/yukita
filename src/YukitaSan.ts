@@ -35,8 +35,8 @@ import type {
   ResolveOutput,
   VoiceServerUpdate,
   VoiceStateUpdate,
-  YukitaClientOptions,
-  YukitaCoreEvents
+  YukitaSanEvents,
+  YukitaSanOptions
 } from './types';
 import { CORE_VERSION } from './version';
 
@@ -51,7 +51,7 @@ type HookEntry = {
 export class YukitaSan {
   public readonly nodePool: NodePool;
   public readonly connector: Connector | null;
-  public readonly events = new AsyncEventBus<YukitaCoreEvents>();
+  public readonly events = new AsyncEventBus<YukitaSanEvents>();
   public readonly extensions: ExtensionsMap = new Map();
   public readonly plugins = new Map<string, YukitaPlugin>();
 
@@ -62,7 +62,7 @@ export class YukitaSan {
   private readonly logger: PluginLogger;
   private readonly hooks: HookEntry[] = [];
 
-  public constructor(options: YukitaClientOptions) {
+  public constructor(options: YukitaSanOptions) {
     this.logger = this.buildLogger(options.logger);
     this.connector = options.connector ?? null;
     this.connector?.set(this);
@@ -152,9 +152,9 @@ export class YukitaSan {
   /**
    * Registers listener and returns unsubscribe function.
    */
-  public on<TKey extends keyof YukitaCoreEvents>(
+  public on<TKey extends keyof YukitaSanEvents>(
     event: TKey,
-    listener: (payload: YukitaCoreEvents[TKey]) => void | Promise<void>
+    listener: (payload: YukitaSanEvents[TKey]) => void | Promise<void>
   ): () => void {
     return this.events.on(event, listener);
   }
@@ -705,10 +705,10 @@ export class YukitaSan {
   /**
    * Emits event ordered per context id.
    */
-  public async emitOrdered<TKey extends keyof YukitaCoreEvents>(
+  public async emitOrdered<TKey extends keyof YukitaSanEvents>(
     contextId: string,
     event: TKey,
-    payload: YukitaCoreEvents[TKey]
+    payload: YukitaSanEvents[TKey]
   ): Promise<void> {
     const previous = this.orderedChains.get(contextId) ?? Promise.resolve();
     const next = previous
@@ -1011,9 +1011,9 @@ export class YukitaSan {
     return ok(current);
   }
 
-  private async dispatchPluginEvent<TKey extends keyof YukitaCoreEvents>(
+  private async dispatchPluginEvent<TKey extends keyof YukitaSanEvents>(
     event: TKey,
-    payload: YukitaCoreEvents[TKey]
+    payload: YukitaSanEvents[TKey]
   ): Promise<void> {
     for (const entry of this.hooks) {
       const hooks = entry.hooks;
