@@ -6,7 +6,7 @@
   "description": "YukiTa audio platform monorepo: core, protocol, gateway, connectors and plugins.",
   "scripts": {
     "build": "pnpm docs:build && pnpm -r build",
-    "build:packages": "pnpm -r build",
+    "build:packages": "pnpm -r --filter \"@yukita/*\" --filter \"!@yukita/docs\" build",
     "typecheck": "pnpm -r typecheck",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test",
